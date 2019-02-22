@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i|Space+Mono:400,700|Special+Elite|Alegreya:400,900|Cousine:400,700');
-
 body {
   font-size: 16px;
   line-height: 1.6;
@@ -11,7 +9,10 @@ body {
   height: 100%;
 }
 
-// fonts
+p {
+	margin-top: 2em;
+}
+
 h1 {
 	font-size: 3em;
 	margin-top: 20px;
@@ -40,4 +41,17 @@ code {
 }
 a {
 	text-decoration: none;
+}
+img {
+	width: 100%;
+}
+
+blockquote {
+	font-style: italic;
+	border-left: 10px solid $color-silver-light;
+	padding: 20px 0 20px 1em;
+	margin: 1em 0;
+	p {
+		margin:0;
+	}
 }

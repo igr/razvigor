@@ -24,8 +24,15 @@ ready(() => {
   Array.prototype.forEach.call(links, function(el, i) {
   	el.addEventListener('click', event => {
   		showSection(el.textContent);
+  		event.preventDefault();
   })});
-  addClass(_('#main'), 'show');
+  if (window.location.hash) {
+      var hash = window.location.hash.substring(1);
+	  showSection(hash);
+  }
+  else {
+  	addClass(_('#main'), 'show');
+  }
 });
 </script>
 <style type="text/css">
@@ -38,6 +45,13 @@ div.background {
 main div.wrapper > div {
 	display: none;
 }
+main {
+  height: 100vh;
+  margin: 0;
+}
+.wrapper {
+  max-height: 500px;
+}
 </style>
 {{ end }}
 {{ define "main" }}
@@ -49,7 +63,8 @@ main div.wrapper > div {
 		<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
 	</div>
 	<div id="razvigor" style="color: #fff;">
-		<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
+		<h2>Razvigor</h2>
+		Ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
 	</div>
 	<div id="unheart">
 		<h2>Unheart</h2>
@@ -59,7 +74,7 @@ main div.wrapper > div {
 
 	</div>
 	<div id="vi">
-		<h2>Visual Interaction</h2>
+		<h2>Visual Interactions</h2>
 
 		{{ partial "section" (dict "context" . "name" "vi") }}
 	</div>
@@ -85,6 +100,16 @@ main div.wrapper > div {
 	</svg>
 	<div class="txt r10" style="top:-60px;">UNHEART</div>
 	<div class="txt r10" style="bottom:-100px;">UNHEART</div>
+</div>
+<div id="vi-back" class="background">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
+	   <polygon fill="#ffdc00" points="0,0 0,120 80,40 100,0"/>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:25vw;bottom:0;">
+	   <polygon fill="#ffdc00" points="0,100 0,60 80,20 180,100"/>
+	</svg>
+	<div class="txt r5" style="top:-30px;">VISUAL</div>
+	<div class="txt r5" style="bottom:-40px;">INTERACTIONS</div>
 </div>
 
 {{ end }}

@@ -1,10 +1,10 @@
 ne želim
-da nadomestiš moje praznine
+da upotpuniš moje praznine
 to mogu i sam
 
 želim da budem toliko
-potpun
-da obasjam ceo jebeni grad
+ceo
+da obasjam jebeni grad
 
 a tada
 želim tebe

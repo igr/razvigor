@@ -1,3 +1,9 @@
+.r-5 {
+	@include prefix('transform', 'rotate(5deg)');
+}
+.r-10 {
+	@include prefix('transform', 'rotate(10deg)');
+}
 .r5 {
 	@include prefix('transform', 'rotate(-5deg)');
 }
@@ -12,7 +18,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-bottom: 10em;
 }
 .wrapper {
   width: 500px;
@@ -20,7 +26,6 @@ main {
   grid-column: 2;
   line-height: 1.2;
   font-size: 2em;
-  max-height: 500px;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
@@ -45,7 +50,7 @@ div.txt {
 	text-transform: uppercase;
 	font-size: 260px;
 	color: $color-white;
-	font-weight: bold;
+	font-weight: 900;
 	text-align: center;
 	width: 100%;
 	position:absolute;
@@ -64,7 +69,7 @@ div.txt {
 		text-align: center;
 		padding: 0.5em 0 0.3em 0;
 		font-size: 1em;
-		font-family: $font-typewriter;
+		font-family: $font-section;
 	}
 }
 #unheart a {
@@ -72,5 +77,12 @@ div.txt {
 	&:hover {
 		color: $color-white;
 		background-color: $color-red;
+	}
+}
+#vi a {
+	color: $color-black;
+	&:hover {
+		color: $color-black;
+		background-color: $color-yellow;
 	}
 }
