@@ -20,6 +20,14 @@ main {
   grid-column: 2;
   line-height: 1.2;
   font-size: 2em;
+  max-height: 500px;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+.wrapper::-webkit-scrollbar { /* WebKit */
+	width: 0;
+	height: 0;
 }
 
 .background {
@@ -50,12 +58,12 @@ div.txt {
 .grid44 {
 	margin: 2em 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	a {
 		display: block;
 		text-align: center;
 		padding: 0.5em 0 0.3em 0;
-		font-size: 2em;
+		font-size: 1em;
 		font-family: $font-typewriter;
 	}
 }
