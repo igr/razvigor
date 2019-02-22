@@ -26,7 +26,7 @@ ready(() => {
   	el.addEventListener('click', event => {
   		showSection(el.textContent);
   })});
-  addClass(_('#razvigor'), 'show');
+  addClass(_('#main'), 'show');
 });
 </script>
 <style type="text/css">
@@ -46,9 +46,11 @@ main div.wrapper div {
 {{ partial "nav" }}
 
 <main><div class="wrapper">
-	<div id="razvigor">
-		<h2>Razvigor</h2>
-		Ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
+	<div id="main">
+		<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
+	</div>
+	<div id="razvigor" style="color: #fff;">
+		<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
 	</div>
 	<div id="unheart">
 		<h2>Unheart</h2>
@@ -60,25 +62,25 @@ main div.wrapper div {
 </div></div>
 
 
-<div id="razvigor-back" class="background">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-top">
-	   <polygon fill="red" points="0,0 0,100 100,30 100,0"/>
+<div id="razvigor-back" class="background vetar">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:10vw;top:0;">
+	   <polygon fill="#fff" points="0,0 0,100 100,50 100,0"/>
 	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-bottom">
-	   <polygon fill="red" points="0,100 20,100 100,0 100,100"/>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:10vw;bottom:0;">
+	   <polygon fill="#fff" points="0,100 10,100 100,0 100,100"/>
 	</svg>
-	<div class="txt txt-top">RAZVIGOR</div>
-	<div class="txt txt-bottom">RAZVIGOR</div>
+	<div class="txt r5" style="top:-120px;">RAZVIGOR</div>
+	<div class="txt r5" style="bottom:-150px;">RAZVIGOR</div>
 </div>
 <div id="unheart-back" class="background">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-top">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
 	   <polygon fill="red" points="0,0 0,100 100,30 100,0"/>
 	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-bottom">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;bottom:0;">
 	   <polygon fill="red" points="0,100 20,100 100,0 100,100"/>
 	</svg>
-	<div class="txt txt-top">UNHEART</div>
-	<div class="txt txt-bottom">UNHEART</div>
+	<div class="txt r10" style="top:-60px;">UNHEART</div>
+	<div class="txt r10" style="bottom:-100px;">UNHEART</div>
 </div>
 
 {{ end }}
