@@ -1,0 +1,6 @@
+baseURL = "https://razvigor.com/"
+languageCode = "en-us"
+title = "razvigor"
+
+[blackfriday]
+  extensions = ["hardLineBreak"]

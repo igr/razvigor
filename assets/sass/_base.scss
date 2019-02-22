@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i|Raleway:400,700|Space+Mono:400,700|Special+Elite|Alegreya:900');
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-main;
+  color: $color-black;
+  background-color: $color-white;
+  height: 100%;
+}
+
+// fonts
+h1 {
+	font-size: 3em;
+	margin-top: 20px;
+	padding: 10px 0;
+	color: $color-red;
+	font-weight: bold;
+	font-family: $font-title;
+}
+h2 {
+	font-size: 1.5em;
+	margin-top: 2em;
+	color: $color-red;
+	font-family: $font-title;
+}
+
+em {
+	font-style: italic;
+}
+
+code {
+	font-family: $font-code;
+	background-color: $color-silver-light;
+	padding: 0.1em 0.2em;
+}

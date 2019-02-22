@@ -1,0 +1,49 @@
+{{ define "head" }}
+<script type="text/javascript">
+
+function animate(items, clazz) {
+  (function show(counter) {
+    setTimeout(function() {
+      items[counter].classList.add(clazz);
+      counter++;
+      if (counter < items.length) show(counter);
+    }, 50);
+  })(0);
+}
+
+ready(() => {
+  const links = __('nav a');
+  animate(links, 'view');
+  Array.prototype.forEach.call(links, function(el, i) {
+  	el.addEventListener('click', event => {
+    	console.log('click');
+  })});
+});
+</script>
+<style type="text/css">
+body {
+  overflow: hidden;
+}
+</style>
+{{ end }}
+{{ define "main" }}
+
+{{ partial "nav" }}
+
+<main id="razvigor"><div class="wrapper">
+	<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
+</div></main>
+
+
+<div class="background">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-top">
+	   <polygon fill="red" points="0,0 0,100 100,30 100,0"/>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-bottom">
+	   <polygon fill="red" points="0,100 20,100 100,0 100,100"/>
+	</svg>
+	<div class="txt txt-top">RAZVIGOR</div>
+	<div class="txt txt-bottom">RAZVIGOR</div>
+</div>
+
+{{ end }}

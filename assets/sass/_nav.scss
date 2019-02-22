@@ -1,0 +1,49 @@
+nav {
+  position:fixed;
+  top:30%;
+  right:1.5em;
+  font-family: $font-typewriter;
+  text-align:right;
+  @include prefix('user-select', 'none');
+  z-index:10;
+
+  ul {
+  margin: 0;
+	padding: 0;
+	list-style: none;
+
+  li a {
+      display: inline-block;
+      margin-bottom: 0.3em;
+      padding: 1em 1em 0.4em 1em;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1em;
+      background: #000;
+      opacity: 0;
+      visibility: hidden;
+      @include prefix('transition', 'all 500ms ease');
+    }
+    li:nth-child(1) {
+      @include prefix('transform', 'rotate(4deg)');
+    }
+    li:nth-child(2) {
+      @include prefix('transform', 'rotate(-2deg)');
+    }
+    li:nth-child(3) {
+      @include prefix('transform', 'rotate(4deg)');
+    }
+
+    li a.view{
+      opacity: 1;
+      visibility:visible;
+    }
+
+    li a.active, li a:hover, li a:focus {
+      background: $color-red;
+      color: $color-white;
+      @include prefix('transition', 'all 500ms ease');
+    }
+  }
+}

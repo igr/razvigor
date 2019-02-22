@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ $style := resources.Get "sass/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel='stylesheet' href='{{ $style.RelPermalink }}' type='text/css' media='all' />
+
+	{{ $appjs := resources.Get "js/app.js" }}
+	{{ $js := slice $appjs | resources.Concat "js/script.js" | minify | fingerprint }}
+	<script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+
+{{ block "main" . }}{{ end }}
+
+</body>
+</html>
