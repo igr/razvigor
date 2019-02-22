@@ -16,6 +16,7 @@ function ready(fn) {
 
 // adds a class
 function addClass(el, className) {
+	if (!el) return;
 	if (el.classList)
 		el.classList.add(className);
 	else
@@ -23,6 +24,7 @@ function addClass(el, className) {
 }
 
 function removeClass(el, className) {
+	if (!el) return;
 	if (el.classList)
 		el.classList.remove(className);
 	else

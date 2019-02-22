@@ -11,13 +11,20 @@ function animate(items, clazz) {
   })(0);
 }
 
+function showSection(name) {
+	removeClass(_('main div.show'), 'show');
+	addClass(_('#' + name), 'show');
+	removeClass(_('.background.show'), 'show');
+	addClass(_('#' + name + '-back'), 'show');
+}
+
+
 ready(() => {
   const links = __('nav a');
   animate(links, 'view');
   Array.prototype.forEach.call(links, function(el, i) {
   	el.addEventListener('click', event => {
-  		removeClass(_('main div div.show'), 'show');
-    	addClass(_('#' + el.textContent), 'show');
+  		showSection(el.textContent);
   })});
   addClass(_('#razvigor'), 'show');
 });
@@ -26,7 +33,7 @@ ready(() => {
 body {
   overflow: hidden;
 }
-#razvigor-back {
+div.background {
 	display: none;
 }
 main div div {
@@ -52,7 +59,7 @@ main div div {
 </div></div>
 
 
-<div class="background" id="razvigor-back">
+<div id="razvigor-back" class="background">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-top">
 	   <polygon fill="red" points="0,0 0,100 100,30 100,0"/>
 	</svg>
