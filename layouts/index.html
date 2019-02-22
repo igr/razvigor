@@ -16,13 +16,21 @@ ready(() => {
   animate(links, 'view');
   Array.prototype.forEach.call(links, function(el, i) {
   	el.addEventListener('click', event => {
-    	console.log('click');
+  		removeClass(_('main div div.show'), 'show');
+    	addClass(_('#' + el.textContent), 'show');
   })});
+  addClass(_('#razvigor'), 'show');
 });
 </script>
 <style type="text/css">
 body {
   overflow: hidden;
+}
+#razvigor-back {
+	display: none;
+}
+main div div {
+	display: none;
 }
 </style>
 {{ end }}
@@ -30,12 +38,21 @@ body {
 
 {{ partial "nav" }}
 
-<main id="razvigor"><div class="wrapper">
-	<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
-</div></main>
+<main><div class="wrapper">
+	<div id="razvigor">
+		<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
+	</div>
+	<div id="unheart">
+		<h2>Unheart</h2>
+		our hearts are meant to be broken. that is the only way we know we have lived.
+	</div>
+	<div id="vi">
+		<h2>VI</h2>
+	</div>
+</div></div>
 
 
-<div class="background">
+<div class="background" id="razvigor-back">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="diag-top">
 	   <polygon fill="red" points="0,0 0,100 100,30 100,0"/>
 	</svg>
