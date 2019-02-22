@@ -1,0 +1,112 @@
+{{ define "head" }}
+<script type="text/javascript">
+window.onload = () => {
+  var container = document.querySelector(".container");
+  var leftPane = container.querySelector(".left");
+  var rightPane = container.querySelector(".right");
+  var sizer = document.querySelector(".sizer");
+
+  sizer.addEventListener("mousedown", downEvent => {
+    sizer.held = true;
+    var startX = downEvent.pageX;
+    var leftPaneStartWidth = leftPane.clientWidth;
+
+    container.addEventListener("mousemove", resize);
+
+    container.addEventListener("mouseup", release);
+
+    function resize(moveEvent) {
+      moveEvent.preventDefault();
+      var delta = moveEvent.pageX - startX;
+      var leftPaneWidth = leftPaneStartWidth + delta;
+      if (sizer.held && leftPaneWidth >= sizer.clientWidth &&
+          leftPaneWidth <= container.clientWidth) {
+        leftPane.style.width = leftPaneWidth + "px";
+        rightPane.style.left = leftPane.clientWidth + "px";
+      }
+    }
+
+    function release() {
+      sizer.held = false;
+      container.removeEventListener("mousemove", resize);
+      container.removeEventListener("mouseup", release);
+    }
+  });
+};
+</script>
+<style type="text/css">
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    overflow: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Alegreya';
+  font-size:4em;
+  font-weight: bold;
+}
+
+.sizer {
+  position: absolute;
+  float: right;
+  right: 0px;
+  width: 20px;
+  height: 100%;
+  cursor: col-resize;
+  background-color: #fff;
+}
+
+.sizer .handle {
+  position: relative;
+  top: 50%;
+  left: -2px;
+  transform: translateY(-50%);
+}
+
+.left {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #563ab6;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.right {
+  position: absolute;
+  left: 25%;
+  right: 0%;
+  height: 100%;
+  background-color: #fffc55;
+  z-index: 2;
+}
+</style>
+{{ end }}
+{{ define "main" }}
+
+<div class="container">
+  <div class="left">
+
+    <div style="position: fixed; left: 20%; width: 30%; z-index: -10; text-align: right; color: #fffc55;">
+        <p>ne daj</p>
+        <p>da bude</p>
+        <p>kraj</p>
+    </div>
+
+    <div class="sizer">
+      <div class="handle">&vellip;</div>
+    </div>
+  </div>
+  <div class="right">
+      <div style="float:left; width: 300px; text-align: right; margin-left: 50%; color: #563ab6;">
+        <p>ne dam</p>
+        <p>da bude</p>
+        <p>kraj</p>
+    </div>
+  </div>
+</div>
+
+{{ end }}
