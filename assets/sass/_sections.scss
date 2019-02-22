@@ -8,7 +8,6 @@
 	@include prefix('transform', 'rotate(-15deg)');
 }
 
-
 main {
   display: flex;
   align-items: center;
@@ -44,13 +43,26 @@ div.txt {
 	position:absolute;
 	font-family: $font-background;
 }
-div.txt-top {
-	top: -80px;
-}
-div.txt-bottom {
-	bottom: -100px;
-}
 .vetar {
 	background-color: $color-wind;
 	color: #fff;
+}
+.grid44 {
+	margin: 2em 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	a {
+		display: block;
+		text-align: center;
+		padding: 0.5em 0 0.3em 0;
+		font-size: 2em;
+		font-family: $font-typewriter;
+	}
+}
+#unheart a {
+	color: $color-red;
+	&:hover {
+		color: $color-white;
+		background-color: $color-red;
+	}
 }

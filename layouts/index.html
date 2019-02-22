@@ -18,7 +18,6 @@ function showSection(name) {
 	addClass(_('#' + name + '-back'), 'show');
 }
 
-
 ready(() => {
   const links = __('nav a');
   animate(links, 'view');
@@ -36,7 +35,7 @@ body {
 div.background {
 	display: none;
 }
-main div.wrapper div {
+main div.wrapper > div {
 	display: none;
 }
 </style>
@@ -55,6 +54,9 @@ main div.wrapper div {
 	<div id="unheart">
 		<h2>Unheart</h2>
 		our hearts are meant to be broken. that is the only way we know we have lived.
+
+		{{ partial "section" (dict "context" . "name" "unheart") }}
+
 	</div>
 	<div id="vi">
 		<h2>Visual Interaction</h2>

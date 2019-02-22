@@ -1,0 +1,14 @@
+{{ $name := .name }}
+{{ $s := slice 0 }}
+{{ range $index, $element := (sort .context.Pages "RelPermalink") }}
+	{{ $numberString := (slicestr .RelPermalink (add (len $name) 2)  (sub (len .RelPermalink) 1)  ) }}
+	{{ $number := (int $numberString) }}
+	{{ $s = $s | append $number }}
+{{ end }}
+
+<div class="grid44">
+{{ range $index, $element := (after 1 (sort $s)) }}
+{{ $c := add $index 1 }}
+<a href="/{{$name}}/{{.}}/">{{$c}}</a>
+{{ end }}
+</div>
