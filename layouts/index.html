@@ -24,6 +24,7 @@ ready(() => {
   Array.prototype.forEach.call(links, function(el, i) {
   	el.addEventListener('click', event => {
   		showSection(el.textContent);
+  		pushHash(el.textContent);
   		event.preventDefault();
   })});
   if (window.location.hash) {

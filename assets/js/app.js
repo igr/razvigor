@@ -23,10 +23,21 @@ function addClass(el, className) {
 		el.className += ' ' + className;
 }
 
+// removes a class
 function removeClass(el, className) {
 	if (!el) return;
 	if (el.classList)
 		el.classList.remove(className);
 	else
 		el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+}
+
+// set the hash
+function pushHash(hashName) {
+	if(history.pushState) {
+	    history.pushState(null, null, '#' + hashName);
+	}
+	else {
+	    location.hash = '#' + hashName;
+	}
 }
