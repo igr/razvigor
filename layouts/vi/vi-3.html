@@ -1,0 +1,155 @@
+{{ define "head" }}
+<script type="text/javascript">
+
+var dragItem = document.querySelector("#item");
+var container = document.querySelector("#container");
+
+var active = false;
+var currentX;
+var currentY;
+var initialX;
+var initialY;
+var xOffset = 0;
+var yOffset = 0;
+
+function dragStart(e) {
+  if (e.type === "touchstart") {
+    initialX = e.touches[0].clientX - xOffset;
+    initialY = e.touches[0].clientY - yOffset;
+  } else {
+    initialX = e.clientX - xOffset;
+    initialY = e.clientY - yOffset;
+  }
+
+  if (e.target === dragItem) {
+    active = true;
+  }
+}
+
+function dragEnd(e) {
+  initialX = currentX;
+  initialY = currentY;
+  active = false;
+}
+
+function drag(e) {
+  if (active) {
+
+    e.preventDefault();
+
+    if (e.type === "touchmove") {
+      currentX = e.touches[0].clientX - initialX;
+      currentY = e.touches[0].clientY - initialY;
+    } else {
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
+    }
+
+    xOffset = currentX;
+    yOffset = currentY;
+
+    setTranslate(currentX, currentY, dragItem);
+  }
+}
+
+function setTranslate(xPos, yPos, el) {
+  yPos = 0;
+  el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+}
+
+
+
+
+window.onload = () => {
+  dragItem = document.querySelector("#item");
+  container = document.querySelector("#container");
+
+  container.addEventListener("touchstart", dragStart, false);
+  container.addEventListener("touchend", dragEnd, false);
+  container.addEventListener("touchmove", drag, false);
+
+  container.addEventListener("mousedown", dragStart, false);
+  container.addEventListener("mouseup", dragEnd, false);
+  container.addEventListener("mousemove", drag, false);
+};
+</script>
+<style type="text/css">
+p {
+  margin: 0;
+}
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    overflow: hidden;
+    font-family: 'Alegreya';
+    font-size:4em;
+    font-weight: bold;
+}
+#container {
+  width: 100%;
+  height: 100vh;
+  background-color: #563ab6;
+  color: #fffc55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+}
+#item {
+  width: 100%;
+  position: relative;
+  left: 25%;
+  height: 100vh;
+  color: #563ab6;
+  background-color: #fffc55;
+  touch-action: none;
+  user-select: none;
+}
+#item:active {
+  background-color: #fff;
+}
+#item:hover {
+  cursor: pointer;
+}
+.sizer {
+  float: left;
+  right: 0px;
+  width: 30px;
+  height: 100%;
+  cursor: col-resize;
+  background-color: #fff;
+  pointer-events: none;
+}
+.sizer .handle {
+  position: relative;
+  top: 50%;
+}
+</style>
+{{ end }}
+{{ define "main" }}
+
+  <div id="outerContainer">
+    <div id="container">
+
+        <div style="position: absolute; top: 20px; left: 50%;">
+          <p>ne daj</p>
+          <p>da bude</p>
+          <p>kraj</p>
+        </div>
+
+      <div id="item">
+         <div class="sizer">
+          <div class="handle">&vellip;</div>
+        </div>
+        <div style="position: absolute; top: 20px; left: 40%; pointer-events: none;">
+          <p>ne dam</p>
+          <p>da bude</p>
+          <p>kraj</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{{ end }}
