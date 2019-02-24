@@ -1,37 +1,76 @@
 {{ define "head" }}
 <script type="text/javascript">
+
+var dragItem = document.querySelector("#item");
+var container = document.querySelector("#container");
+
+var active = false;
+var currentX;
+var currentY;
+var initialX;
+var initialY;
+var xOffset = 0;
+var yOffset = 0;
+
+function dragStart(e) {
+  if (e.type === "touchstart") {
+    initialX = e.touches[0].clientX - xOffset;
+    initialY = e.touches[0].clientY - yOffset;
+  } else {
+    initialX = e.clientX - xOffset;
+    initialY = e.clientY - yOffset;
+  }
+
+  if (e.target === dragItem) {
+    active = true;
+  }
+}
+
+function dragEnd(e) {
+  initialX = currentX;
+  initialY = currentY;
+  active = false;
+}
+
+function drag(e) {
+  if (active) {
+
+    e.preventDefault();
+
+    if (e.type === "touchmove") {
+      currentX = e.touches[0].clientX - initialX;
+      currentY = e.touches[0].clientY - initialY;
+    } else {
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
+    }
+
+    xOffset = currentX;
+    yOffset = currentY;
+
+    setTranslate(currentX, currentY, dragItem);
+  }
+}
+
+function setTranslate(xPos, yPos, el) {
+  yPos = 0;
+  el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+}
+
+
+
+
 window.onload = () => {
-  var container = document.querySelector(".container");
-  var leftPane = container.querySelector(".left");
-  var rightPane = container.querySelector(".right");
-  var sizer = document.querySelector(".sizer");
+  dragItem = document.querySelector("#item");
+  container = document.querySelector("#container");
 
-  sizer.addEventListener("mousedown", downEvent => {
-    sizer.held = true;
-    var startX = downEvent.pageX;
-    var leftPaneStartWidth = leftPane.clientWidth;
+  container.addEventListener("touchstart", dragStart, false);
+  container.addEventListener("touchend", dragEnd, false);
+  container.addEventListener("touchmove", drag, false);
 
-    container.addEventListener("mousemove", resize);
-
-    container.addEventListener("mouseup", release);
-
-    function resize(moveEvent) {
-      moveEvent.preventDefault();
-      var delta = moveEvent.pageX - startX;
-      var leftPaneWidth = leftPaneStartWidth + delta;
-      if (sizer.held && leftPaneWidth >= sizer.clientWidth &&
-          leftPaneWidth <= container.clientWidth) {
-        leftPane.style.width = leftPaneWidth + "px";
-        rightPane.style.left = leftPane.clientWidth + "px";
-      }
-    }
-
-    function release() {
-      sizer.held = false;
-      container.removeEventListener("mousemove", resize);
-      container.removeEventListener("mouseup", release);
-    }
-  });
+  container.addEventListener("mousedown", dragStart, false);
+  container.addEventListener("mouseup", dragEnd, false);
+  container.addEventListener("mousemove", drag, false);
 };
 </script>
 <style type="text/css">
@@ -42,74 +81,75 @@ body {
     font-size: 16px;
     line-height: 1.6;
     overflow: hidden;
+    font-family: 'Alegreya';
+    font-size:4em;
+    font-weight: bold;
 }
-.container {
-  position: relative;
+#container {
   width: 100%;
   height: 100vh;
-  font-family: 'Alegreya';
-  font-size:4em;
-  font-weight: bold;
+  background-color: #563ab6;
+  color: #fffc55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
 }
-
+#item {
+  width: 100%;
+  position: relative;
+  left: 25%;
+  height: 100vh;
+  color: #563ab6;
+  background-color: #fffc55;
+  touch-action: none;
+  user-select: none;
+}
+#item:active {
+  background-color: #fff;
+}
+#item:hover {
+  cursor: pointer;
+}
 .sizer {
-  position: absolute;
-  float: right;
+  float: left;
   right: 0px;
-  width: 20px;
+  width: 30px;
   height: 100%;
   cursor: col-resize;
   background-color: #fff;
+  pointer-events: none;
 }
-
 .sizer .handle {
   position: relative;
   top: 50%;
-  left: -2px;
-  transform: translateY(-50%);
-}
-
-.left {
-  position: absolute;
-  width: 25%;
-  height: 100%;
-  background-color: #563ab6;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.right {
-  position: absolute;
-  left: 25%;
-  right: 0%;
-  height: 100%;
-  background-color: #fffc55;
-  z-index: 2;
 }
 </style>
 {{ end }}
 {{ define "main" }}
 
-<div class="container">
-  <div class="left">
+  <div id="outerContainer">
+    <div id="container">
 
-    <div style="position: fixed; left: 20%; width: 30%; z-index: -10; text-align: right; color: #fffc55;">
-        <p>ne daj</p>
-        <p>da bude</p>
-        <p>kraj</p>
-    </div>
+        <div style="position: absolute; top: 20px; left: 50%;">
+          <p>ne daj</p>
+          <p>da bude</p>
+          <p>kraj</p>
+        </div>
 
-    <div class="sizer">
-      <div class="handle">&vellip;</div>
+      <div id="item">
+         <div class="sizer">
+          <div class="handle">&vellip;</div>
+        </div>
+        <div style="position: absolute; top: 20px; left: 40%; pointer-events: none;">
+          <p>ne dam</p>
+          <p>da bude</p>
+          <p>kraj</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="right">
-      <div style="float:left; width: 300px; text-align: right; margin-left: 50%; color: #563ab6;">
-        <p>ne dam</p>
-        <p>da bude</p>
-        <p>kraj</p>
-    </div>
-  </div>
-</div>
+
 
 {{ end }}
