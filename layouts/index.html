@@ -1,4 +1,6 @@
 {{ define "head" }}
+{{ $styleHeart := resources.Get "sass/heart.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel='stylesheet' href='{{ $styleHeart.RelPermalink }}' type='text/css' media='all' />
 <script type="text/javascript">
 
 function animate(items, clazz) {
@@ -69,7 +71,7 @@ main {
 	</div>
 	<div id="unheart">
 		<h2>Unheart</h2>
-		our hearts are meant to be broken. that is the only way we know we have lived.
+		Naša srca trebaju biti slomljena. To je jedini način da znamo da smo živeli.
 
 		{{ partial "section" (dict "context" . "name" "unheart") }}
 
@@ -99,8 +101,8 @@ main {
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;bottom:0;">
 	   <polygon fill="#ff4136" points="0,100 20,100 100,0 100,100"/>
 	</svg>
-	<div class="txt r10" style="top:-60px;">UNHEART</div>
-	<div class="txt r10" style="bottom:-100px;">UNHEART</div>
+	<div class="txt r10 heartbeat" style="top:-60px;">UNHEART</div>
+	<div class="txt r10 heartbeat" style="bottom:-100px;">UNHEART</div>
 </div>
 <div id="vi-back" class="background">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">

@@ -1,0 +1,144 @@
+$heart-rotate: -10deg;
+$heart-scale: 1.1;
+
+@-webkit-keyframes heartbeat {
+  0% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  14% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  28% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  42% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  70% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+}
+@-moz-keyframes heartbeat {
+  0% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  14% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  28% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  42% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  70% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+}
+@-o-keyframes heartbeat {
+  0% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  14% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  28% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  42% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  70% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  14% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  28% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+  42% {
+    -moz-transform: rotate($heart-rotate) scale($heart-scale);
+    -ms-transform: rotate($heart-rotate) scale($heart-scale);
+    -webkit-transform: rotate($heart-rotate) scale($heart-scale);
+    transform: rotate($heart-rotate) scale($heart-scale);
+  }
+  70% {
+    -moz-transform: rotate($heart-rotate) scale(1);
+    -ms-transform: rotate($heart-rotate) scale(1);
+    -webkit-transform: rotate($heart-rotate) scale(1);
+    transform: rotate($heart-rotate) scale(1);
+  }
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+.heartbeat:not(:required) {
+  -webkit-animation: heartbeat 1300ms ease 0s infinite normal;
+  -khtml-animation: heartbeat 1300ms ease 0s infinite normal;
+  -moz-animation: heartbeat 1300ms ease 0s infinite normal;
+  -ms-animation: heartbeat 1300ms ease 0s infinite normal;
+  -o-animation: heartbeat 1300ms ease 0s infinite normal;
+  animation: heartbeat 1300ms ease 0s infinite normal;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
