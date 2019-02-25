@@ -16,6 +16,11 @@
 </head>
 <body>
 
+{{ $section := .Section }}
+{{ if (ne $section "") }}
+	{{ partial "breadcrumb" . }}
+{{ end }}
+
 {{ block "main" . }}{{ end }}
 
 </body>

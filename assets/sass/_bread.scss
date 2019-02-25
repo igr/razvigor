@@ -1,10 +1,19 @@
 #breadnav {
   position: fixed;
-  z-top: 100;
+  z-index: 100;
+  width: 40px;
+  left: 4px;
+  top: 4px;
+  line-height: 0;
   a {
   	padding: 0;
+  	margin: 0;
+  	display: block;
   }
-  img {
-  	width: 64px;
+  svg path {
+  	stroke: $color-black;
+  }
+  svg:hover path {
+  	stroke: none;
   }
 }
