@@ -16,22 +16,22 @@
   }
 }
 
-#razvigor-back {
-  svg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-  }
-  path {
-    stroke-dasharray: 800;
-    stroke-dashoffset: 800;
-    animation: dash 8s ease-in forwards infinite;
+#razvigor svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
 
-    @for $i from 1 through 6 {
-      &:nth-child(#{$i}) {
-        animation-delay: random(2) + ($i - 1) * 6 + 3s;
-      }
+#razvigor-back path {
+  stroke-width: 3px;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: dash 8s ease-in forwards infinite;
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: random(2) + ($i - 1) * 6 + 3s;
     }
   }
 }
