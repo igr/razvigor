@@ -34,5 +34,3 @@ pre nego
 postao
 on je
 prestao
-
-JI

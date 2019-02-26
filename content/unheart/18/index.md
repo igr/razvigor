@@ -29,11 +29,11 @@ Ne moraš voleti niti pročitati ovu knjigu. Čuvaj je kao knjigu koja nikada ni
 
 ## Mr. Gvin
 
-Dok sam te čekao pred hamburgere u knjižari, prilično gladan i pomalo umoran, nabasao sam na knjigu "Tri puta u zoru" od Barika. Kratka knjiga i vrlo privlačan rezime - tri nemoguća susreta muškarca i žene - kao i činjenica da Bariko stoji iza nje, nagnala me je da je kupim.
+Dok sam te čekao jednom tako u knjižari, prilično gladan i pomalo umoran, nabasao sam na knjigu "Tri puta u zoru" od Barika. Kratka knjiga i vrlo privlačan rezime - tri nemoguća susreta muškarca i žene - kao i činjenica da Bariko stoji iza nje, nagnala me je da je kupim.
 
 Probudila me je ova knjižica. Setio sam se svih ostalih Barikovih knjiga. Poželeo sam još. Kako je ova knjiga na neki način povezana sa "Mr. Gvinom", prva stvar koju sam uradio je bila da je pronađem (kupio sam je baš davno) i započnem.
 
-Mr Gvin je prelepa knjiga. Knjiga reči, života, osećanja, samoće i punoće. Odavno me tako neka knjiga nije dirnula. Ne umem još da sažmem misli; zamišljam je kao impresinističku sliku na kojoj ne pronalaziš jasno oblike, ali razumeš smisao. I svrhu. Ne samo slike i knjige, nego svoju. Neprestano nastavljaš da je gledaš i uvek pronalazi nove načine da te osvetli.
+Mr. Gvin je prelepa knjiga. Knjiga reči, života, osećanja, samoće i punoće. Odavno me tako neka knjiga nije dirnula. Ne umem još da sažmem misli; zamišljam je kao impresionističku sliku na kojoj ne pronalaziš jasno oblike, ali razumeš smisao. I svrhu. Ne samo slike i knjige, nego svoju. Neprestano nastavljaš da je gledaš i uvek pronalazi nove načine da te osvetli.
 
 Ova knjiga je poput povratka kući.
 

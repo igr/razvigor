@@ -3,9 +3,9 @@ samo ne govorim
 više
 jer čekam da dođeš
 u moju sobu
-da te poljubim
+da ti poljubim
 prste
 i da ti u ruke
-dam
+predam
 sve reči
 o tebi.

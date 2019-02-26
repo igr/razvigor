@@ -12,6 +12,13 @@ body {
 p {
 	margin-top: 2em;
 }
+p.small {
+	margin-top: 1em;
+	font-size: 0.6em;
+}
+.center {
+	text-align: center;
+}
 
 h1 {
 	font-size: 3em;

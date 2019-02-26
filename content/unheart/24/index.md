@@ -1,5 +1,5 @@
 
-Ja volim
+Volim
 tebe.
 Beskrajno i
 neizrecivo.
@@ -8,5 +8,4 @@ u pola noći
 i evo me,
 pišem ovo.
 Moja ljubav,
-moja srećica,
 moja malena.
