@@ -7,6 +7,9 @@
 body {
   background-color: #e7e7e7;
 }
+#win {
+  display: none;
+}
 canvas { width: 640px; height: 640px; }
 @media (max-width: 720px) {
   canvas {
@@ -28,6 +31,7 @@ canvas { width: 640px; height: 640px; }
 {{ define "main" }}
 <main><div class="wrapper" style="width:640px">
 <canvas id="theCanvas"></canvas>
+<div id="win" class="center">your heart is now complete.</div>
 </div></main>
 
 <script>
@@ -141,12 +145,12 @@ function draw(t, d) {
     return;
   }
 
-  x1 = t[0] * ratioX + offsetX;
-  y1 = t[1] * ratioY + offsetY;
-  x2 = t[2] * ratioX + offsetX;
-  y2 = t[3] * ratioY + offsetY;
-  x3 = t[4] * ratioX + offsetX;
-  y3 = t[5] * ratioY + offsetY;
+  var x1 = t[0] * ratioX + offsetX;
+  var y1 = t[1] * ratioY + offsetY;
+  var x2 = t[2] * ratioX + offsetX;
+  var y2 = t[3] * ratioY + offsetY;
+  var x3 = t[4] * ratioX + offsetX;
+  var y3 = t[5] * ratioY + offsetY;
 
   d.t = [x1,y1,x2,y2,x3,y3];
 
@@ -259,16 +263,30 @@ function drawPoint(p) {
 }
 
 
+// check if we won!
+function checkWin() {
+  var c = data[0].c;
+  for (var i = 1; i < data.length; i++) {
+    if (data[1].c !== c) {
+      $('#win').hide();
+      return;
+    }
+  }
+  console.log('winner');
+  $('#win').show();
+}
+
 function doMouseDown(event) {
-  c = getMousePos(event, canvas);
+  var c = getMousePos(event, canvas);
 //  drawPoint(c);
-  i = findTriangle(c);
+  var i = findTriangle(c);
   if (i == -1) {
     return;
   }
   data[i].p = 0;
   data[i].c = rndColor(i);
   go(false);
+  checkWin();
 }
 
 var drawing = false;
