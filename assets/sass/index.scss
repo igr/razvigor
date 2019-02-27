@@ -1,4 +1,5 @@
 @import "mixins";
+@import "variables";
 
 // wind
 
@@ -67,4 +68,21 @@ $heart-scale: 1.1;
   display: inline-block;
   position: relative;
   overflow: hidden;
+}
+
+
+
+#unhearted a {
+  color: $color-red;
+  &:hover {
+    color: $color-white;
+    background-color: $color-red;
+  }
+}
+#visual a {
+  color: $color-black;
+  &:hover {
+    color: $color-black;
+    background-color: $color-yellow;
+  }
 }

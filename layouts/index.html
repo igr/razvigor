@@ -81,17 +81,15 @@ main {
 	<div id="razvigor" style="color: #fff;">
 		Ime za <b>vetar</b> koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
 	</div>
-	<div id="unheart">
-		<h2>Unheart</h2>
+	<div id="unhearted">
 		Srca postoje da budu slomljena. Samo tako znamo da smo živeli.
 
-		{{ partial "section" (dict "context" . "name" "unheart") }}
+		{{ partial "section" (dict "context" . "name" "unhearted") }}
 
 	</div>
-	<div id="vi">
-		<h2>Visual Interactions</h2>
-
-		{{ partial "section" (dict "context" . "name" "vi") }}
+	<div id="visual">
+		Interakcija kroz vizuelni kontekst. Uticaj na stvarnost i promenu.
+		{{ partial "section" (dict "context" . "name" "visual") }}
 	</div>
 </div></div>
 
@@ -109,17 +107,17 @@ main {
 	</svg>
 	<div class="txt r5" style="top:-120px;">RAZVIGOR</div>
 </div>
-<div id="unheart-back" class="background">
+<div id="unhearted-back" class="background">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
 	   <polygon fill="#ff4136" points="0,0 0,100 100,30 100,0"/>
 	</svg>
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;bottom:0;">
 	   <polygon fill="#ff4136" points="0,100 20,100 100,0 100,100"/>
 	</svg>
-	<div class="txt r10 heartbeat" style="top:-60px;">UNHEART</div>
-	<div class="txt r10 heartbeat" style="bottom:-200px;">UNHEART</div>
+	<div class="txt r10 heartbeat" style="top:-60px;">UNHEARTED</div>
+	<div class="txt r10 heartbeat" style="bottom:-200px;">UNHEARTED</div>
 </div>
-<div id="vi-back" class="background">
+<div id="visual-back" class="background">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;" id="vi-1">
 	   <polygon fill="#ffdc00" points="0,0 0,120 80,40 100,0"/>
 	</svg>
@@ -134,7 +132,7 @@ main {
 	   <polygon fill="#ffdc00" points="0,100 20,30 150,60 100,100"/>
 	</svg>
 	<div class="txt r5" style="top:-30px;">VISUAL</div>
-	<div class="txt r5" style="bottom:-40px;">INTERACTIONS</div>
+	<div class="txt r5" style="bottom:-40px;">IMAGERY</div>
 </div>
 
 {{ end }}

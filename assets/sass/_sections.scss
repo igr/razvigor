@@ -72,17 +72,3 @@ div.txt {
 		font-family: $font-section;
 	}
 }
-#unheart a {
-	color: $color-red;
-	&:hover {
-		color: $color-white;
-		background-color: $color-red;
-	}
-}
-#vi a {
-	color: $color-black;
-	&:hover {
-		color: $color-black;
-		background-color: $color-yellow;
-	}
-}
