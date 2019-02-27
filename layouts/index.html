@@ -36,6 +36,17 @@ ready(() => {
   else {
   	addClass(_('#main'), 'show');
   }
+  var vindex = 1;
+  window.setInterval(function () {
+  	_('#vi-' + vindex).style.display = "none";
+  	_('#vii-' + vindex).style.display = "none";
+  	vindex += 1;
+  	if (vindex > 2) {
+  		vindex = 1;
+  	}
+  	_('#vi-' + vindex).style.display = "block";
+  	_('#vii-' + vindex).style.display = "block";
+  }, 1000);
 });
 </script>
 <style type="text/css">
@@ -86,14 +97,16 @@ main {
 
 
 <div id="razvigor-back" class="background vetar">
-	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 442 342">
-	<path id="svg_1" d="m442 75c0 0-65-39-120-33-110 8-214 83-259 82-33 0-55-18-52-45 3-21 27-37 53-34 21 2 36 18 34 35-2 14-17 24-34 22-13-1-23-11-21-22 1-9 11-15 22-14 9 1 15 7 14 14-1 6-7 10-14 9-5 0-9-5-9-9" stroke="#fff" fill="none"></path>
-	<path id="svg_3" d="m442 101c0 0-38-23-124-25-85-2-132 21-136 39s4 27 13 31c7 3 16 0 18-6 2-5-1-12-6-14-5-2-10 0-12 4-1 4 0 8 4 9 3 1 6 0 8-3 1-2 0-5-3-6-2-1-4 0-5 2-1 1 0 3 2 4" stroke="#fff" fill="none"></path>
-	<path id="svg_4" d="m442 165c0 0-103-62-131-52-28 10 23 43-3 59-26 16-144-4-144-4l-165-36" stroke="#fff" fill="none"></path>
-  	<path id="svg_5" d="m442 228c0 0-40-43-63-50-22-7-23 41-56 45-122 11-323-53-323-53" stroke="#fff" fill="none"></path>
-	<path id="svg_6" d="m442 278c0 0-22-3-89-18-68-16-127 34-195 35-68 1-157-70-157-70" stroke="#fff" fill="none"></path>
+	<svg width="100%" height="100%" viewBox="0 0 600 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+		<path id="svg_1" d="M600,91.843c0,0 -65,-39 -120,-33c-110,8 -214,83 -259,82c-33,0 -55,-18 -52,-45c3,-21 27,-37 53,-34c21,2 36,18 34,35c-2,14 -17,24 -34,22c-13,-1 -23,-11 -21,-22c1,-9 11,-15 22,-14c9,1 15,7 14,14c-1,6 -7,10 -14,9c-5,0 -9,-5 -9,-9" style="fill:none;"/>
+		<path id="svg_2" d="M600,194.875c0,0 -116.657,66.23 -202.657,68.23c-85,2 -132,-21 -136,-39c-4,-18 4,-27 13,-31c7,-3 16,0 18,6c2,5 -1,12 -6,14c-5,2 -10,0 -12,-4c-1,-4 0,-8 4,-9c3,-1 6,0 8,3c1,2 0,5 -3,6c-2,1 -4,0 -5,-2c-1,-1 0,-3 2,-4" style="fill:none;"/>
+		<path id="svg_3" d="M600,117.843c0,0 -38,-23 -124,-25c-85,-2 -132,21 -136,39c-4,18 4,27 13,31c7,3 16,0 18,-6c2,-5 -1,-12 -6,-14c-5,-2 -10,0 -12,4c-1,4 0,8 4,9c3,1 6,0 8,-3c1,-2 0,-5 -3,-6c-2,-1 -4,0 -5,2c-1,1 0,3 2,4" style="fill:none;"/>
+		<path id="svg_4" d="M600,181.843c0,0 -103,-62 -131,-52c-28,10 23,43 -3,59c-26,16 -144,-4 -144,-4l-165,-36" style="fill:none;"/>
+		<path id="svg_5" d="M600,244.843c0,0 -48.002,-43 -75.604,-50c-26.401,-7 -27.601,41 -67.203,45c-146.408,11 -387.621,-53 -387.621,-53" style="fill:none;"/>
+		<path id="svg_6" d="M600,294.843c0,0 -20.793,-3 -84.116,-18c-64.269,-16 -120.032,34 -184.3,35c-64.269,1 -148.385,-70 -148.385,-70" style="fill:none;"/>
+		<path id="svg_7" d="M600,147c0,0 -22.792,3 -92.205,18c-70.449,16 -131.574,-34 -202.023,-35c-70.449,-1 -162.654,70 -162.654,70" style="fill:none;"/>
+		<path id="svg_8" d="M82.903,263.227c0,0 46.841,43 73.775,50c25.763,7 26.934,-41 65.578,-45c142.866,-11 378.244,53 378.244,53" style="fill:none;"/>
 	</svg>
-</svg>
 	<div class="txt r5" style="top:-120px;">RAZVIGOR</div>
 </div>
 <div id="unheart-back" class="background">
@@ -104,14 +117,21 @@ main {
 	   <polygon fill="#ff4136" points="0,100 20,100 100,0 100,100"/>
 	</svg>
 	<div class="txt r10 heartbeat" style="top:-60px;">UNHEART</div>
-	<div class="txt r10 heartbeat" style="bottom:-100px;">UNHEART</div>
+	<div class="txt r10 heartbeat" style="bottom:-200px;">UNHEART</div>
 </div>
 <div id="vi-back" class="background">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;" id="vi-1">
 	   <polygon fill="#ffdc00" points="0,0 0,120 80,40 100,0"/>
 	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:25vw;bottom:0;">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;display:none;" id="vi-2">
+	   <polygon fill="#ffdc00" points="-20,0 40,120 80,40 150,0"/>
+	</svg>
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:25vw;bottom:0;" id="vii-1">
 	   <polygon fill="#ffdc00" points="0,100 0,60 80,20 180,100"/>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:25vw;bottom:0;" id="vii-2">
+	   <polygon fill="#ffdc00" points="0,100 20,30 150,60 100,100"/>
 	</svg>
 	<div class="txt r5" style="top:-30px;">VISUAL</div>
 	<div class="txt r5" style="bottom:-40px;">INTERACTIONS</div>

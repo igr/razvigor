@@ -6,11 +6,11 @@
   0% {
     stroke-dashoffset: 800;
   }
-  10% {
+  20% {
     stroke-dasharray: 400;
     stroke-dashoffset: 0;
   }
-  20%, 100% {
+  40%, 100% {
     stroke-dasharray: 800;
     stroke-dashoffset: -800;
   }
@@ -24,14 +24,15 @@
 }
 
 #razvigor-back path {
+  stroke: #fff;
   stroke-width: 3px;
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
   animation: dash 8s ease-in forwards infinite;
 
-  @for $i from 1 through 6 {
+  @for $i from 1 through 8 {
     &:nth-child(#{$i}) {
-      animation-delay: random(2) + ($i - 1) * 6 + 3s;
+      animation-delay: random(2) + ($i - 1) * 2 + 0.5s;
     }
   }
 }
