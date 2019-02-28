@@ -82,6 +82,7 @@ main {
 		Ime za <b>vetar</b> koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
 	</div>
 	<div id="unhearted">
+		<h1>&nbsp;</h1>
 		Srca postoje da budu slomljena. Samo tako znamo da smo živeli.
 
 		{{ partial "section" (dict "context" . "name" "unhearted") }}
@@ -90,6 +91,10 @@ main {
 	<div id="visual">
 		Interakcija kroz vizuelni kontekst. Uticaj na stvarnost i promenu.
 		{{ partial "section" (dict "context" . "name" "visual") }}
+	</div>
+	<div id="light">
+		Hvatanjem svetlosti pričamo hiljade reči. Bez izgovorenog glasa.
+		{{ partial "section" (dict "context" . "name" "light") }}
 	</div>
 </div></div>
 
@@ -103,9 +108,8 @@ main {
 		<path id="svg_5" d="M600,244.843c0,0 -48.002,-43 -75.604,-50c-26.401,-7 -27.601,41 -67.203,45c-146.408,11 -387.621,-53 -387.621,-53" style="fill:none;"/>
 		<path id="svg_6" d="M600,294.843c0,0 -20.793,-3 -84.116,-18c-64.269,-16 -120.032,34 -184.3,35c-64.269,1 -148.385,-70 -148.385,-70" style="fill:none;"/>
 		<path id="svg_7" d="M600,147c0,0 -22.792,3 -92.205,18c-70.449,16 -131.574,-34 -202.023,-35c-70.449,-1 -162.654,70 -162.654,70" style="fill:none;"/>
-		<path id="svg_8" d="M82.903,263.227c0,0 46.841,43 73.775,50c25.763,7 26.934,-41 65.578,-45c142.866,-11 378.244,53 378.244,53" style="fill:none;"/>
 	</svg>
-	<div class="txt r5" style="top:-120px;">RAZVIGOR</div>
+	<div class="txt text-pop-up-top" style="top:-120px;">RAZVIGOR</div>
 </div>
 <div id="unhearted-back" class="background">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
@@ -133,6 +137,16 @@ main {
 	</svg>
 	<div class="txt r5" style="top:-30px;">VISUAL</div>
 	<div class="txt r5" style="bottom:-40px;">IMAGERY</div>
+</div>
+<div id="light-back" class="background">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
+	   <polygon fill="#85144b" points="0,0 0,100 100,30 100,0"/>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;bottom:0;">
+	   <polygon fill="#85144b" points="0,100 0,80 120,0 100,100"/>
+	</svg>
+	<div class="txt r10 flicker-4" style="top:-40px;">LIGHT</div>
+	<div class="txt r5 flicker-4" style="bottom:-80px;">STORE</div>
 </div>
 
 {{ end }}
