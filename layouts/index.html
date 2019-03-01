@@ -36,17 +36,6 @@ ready(() => {
   else {
   	addClass(_('#main'), 'show');
   }
-  var vindex = 1;
-  window.setInterval(function () {
-  	_('#vi-' + vindex).style.display = "none";
-  	_('#vii-' + vindex).style.display = "none";
-  	vindex += 1;
-  	if (vindex > 2) {
-  		vindex = 1;
-  	}
-  	_('#vi-' + vindex).style.display = "block";
-  	_('#vii-' + vindex).style.display = "block";
-  }, 1000);
 });
 </script>
 <style type="text/css">
@@ -66,8 +55,6 @@ main {
 .wrapper {
   max-height: 500px;
 }
-
-
 </style>
 {{ end }}
 {{ define "main" }}
@@ -79,18 +66,25 @@ main {
 		<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
 	</div>
 	<div id="razvigor" style="color: #fff;">
-		Ime za <b>vetar</b> koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
+		<p>
+			Ime za <b>vetar</b> koji počinje da duva u rano proleće.
+		</p>
 	</div>
 	<div id="unhearted">
-		<h1>&nbsp;</h1>
+		<p>
 		Srca postoje da budu slomljena. Samo tako znamo da smo živeli.
+		</p>
 
 		{{ partial "section" (dict "context" . "name" "unhearted") }}
 
 	</div>
 	<div id="visual">
+		<p>
 		Interakcija kroz vizuelni kontekst. Uticaj na stvarnost i promenu.
+		</p>
+
 		{{ partial "section" (dict "context" . "name" "visual") }}
+
 	</div>
 	<div id="light">
 		Hvatanjem svetlosti pričamo hiljade reči. Bez izgovorenog glasa.
@@ -111,42 +105,49 @@ main {
 	</svg>
 	<div class="txt text-pop-up-top" style="top:-120px;">RAZVIGOR</div>
 </div>
+
 <div id="unhearted-back" class="background">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
 	   <polygon fill="#ff4136" points="0,0 0,100 100,30 100,0"/>
 	</svg>
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;bottom:0;">
-	   <polygon fill="#ff4136" points="0,100 20,100 100,0 100,100"/>
+	   <polygon fill="#ff4136" points="0,100 20,100 100,-20 100,100"/>
 	</svg>
-	<div class="txt r10 heartbeat" style="top:-60px;">UNHEARTED</div>
-	<div class="txt r10 heartbeat" style="bottom:-200px;">UNHEARTED</div>
+	<div class="txt r-5" style="position:absolute; top:-0px; font-size: 6em; white-space: nowrap;">UN<span class="heartbeat">HEART</span>ED</div>
 </div>
-<div id="visual-back" class="background">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;" id="vi-1">
-	   <polygon fill="#ffdc00" points="0,0 0,120 80,40 100,0"/>
-	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;display:none;" id="vi-2">
-	   <polygon fill="#ffdc00" points="-20,0 40,120 80,40 150,0"/>
-	</svg>
 
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:25vw;bottom:0;" id="vii-1">
-	   <polygon fill="#ffdc00" points="0,100 0,60 80,20 180,100"/>
+<div id="visual-back" class="background" style="background-color: #ffdc00">
+	<svg viewBox="0 0 500 140" style="position: absolute; width: 100%;font-size: 6em; top: 0;">
+	  <!-- Symbol-->
+	  <symbol id="s-text">
+	    <text text-anchor="middle" x="50%" y="50%">VISUAL</text>
+	  </symbol>
+	  <!-- Duplicate symbols-->
+	  <use class="ant-text" xlink:href="#s-text"></use>
+	  <use class="ant-text" xlink:href="#s-text"></use>
+	  <use class="ant-text" xlink:href="#s-text"></use>
+	  <use class="ant-text" xlink:href="#s-text"></use>
+	  <use class="ant-text" xlink:href="#s-text"></use>
 	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:25vw;bottom:0;" id="vii-2">
-	   <polygon fill="#ffdc00" points="0,100 20,30 150,60 100,100"/>
+	<svg viewBox="0 0 500 140" style="position: absolute; width: 100%; font-size: 6em; bottom: 0;">
+	  <!-- Symbol-->
+	  <symbol id="s-text2">
+	    <text text-anchor="middle" x="50%" y="80%">IMAGERY</text>
+	  </symbol>
+	  <!-- Duplicate symbols-->
+	  <use class="ant-text" xlink:href="#s-text2"></use>
+	  <use class="ant-text" xlink:href="#s-text2"></use>
+	  <use class="ant-text" xlink:href="#s-text2"></use>
+	  <use class="ant-text" xlink:href="#s-text2"></use>
+	  <use class="ant-text" xlink:href="#s-text2"></use>
 	</svg>
-	<div class="txt r5" style="top:-30px;">VISUAL</div>
-	<div class="txt r5" style="bottom:-40px;">IMAGERY</div>
 </div>
 <div id="light-back" class="background">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;top:0;">
 	   <polygon fill="#85144b" points="0,0 0,100 100,30 100,0"/>
 	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;bottom:0;">
-	   <polygon fill="#85144b" points="0,100 0,80 120,0 100,100"/>
-	</svg>
-	<div class="txt r10 flicker-4" style="top:-40px;">LIGHT</div>
-	<div class="txt r5 flicker-4" style="bottom:-80px;">STORE</div>
+	<div class="txt r5 flicker-4" style="top:-40px;">LIGHT</div>
+	<div class="txt r-5 flicker-4" style="bottom:-80px;color:#fff; text-shadow: 12px 12px #85144b">CAPTURED</div>
 </div>
 
 {{ end }}

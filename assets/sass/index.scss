@@ -1,5 +1,4 @@
-@import "mixins";
-@import "variables";
+@import "init/init";
 
 // wind
 
@@ -41,24 +40,29 @@
 
 // HEART
 
-$heart-rotate: -10deg;
-$heart-scale: 1.1;
+$heart-scale: 1.2;
+$heart-off: 0.3;
 
 @include keyframes(heartbeat) {
   0% {
-    @include prefix(transform, rotate($heart-rotate) scale(1));
+    @include prefix(transform, scale(1));
+    opacity: 1;
   }
   7% {
-    @include prefix(transform, rotate($heart-rotate) scale($heart-scale));
+    @include prefix(transform, scale($heart-scale));
+    opacity: $heart-off;
   }
   14% {
-    @include prefix(transform, rotate($heart-rotate) scale(1));
+    @include prefix(transform, scale(1));
+    opacity: 1;
   }
   21% {
-    @include prefix(transform, rotate($heart-rotate) scale($heart-scale));
+    @include prefix(transform, scale($heart-scale));
+    opacity: $heart-off;
   }
   35% {
-    @include prefix(transform, rotate($heart-rotate) scale(1));
+    @include prefix(transform, scale(1));
+    opacity: 1;
   }
 }
 
@@ -66,8 +70,6 @@ $heart-scale: 1.1;
 .heartbeat:not(:required) {
   @include animation("heartbeat 2600ms ease 0s infinite normal");
   display: inline-block;
-  position: relative;
-  overflow: hidden;
 }
 
 
@@ -121,181 +123,131 @@ $heart-scale: 1.1;
   }
 }
 
+// light
+
+.flicker-4 {
+  @include animation("flicker-4 4s linear infinite both");
+}
+
+@include keyframes(flicker-4) {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  31.98% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  32.8% {
+    opacity: 0;
+  }
+  32.82% {
+    opacity: 1;
+  }
+  34.98% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  35.7% {
+    opacity: 0;
+  }
+  35.72% {
+    opacity: 1;
+  }
+  36.98% {
+    opacity: 1;
+  }
+  37% {
+    opacity: 0;
+  }
+  37.6% {
+    opacity: 0;
+  }
+  37.62% {
+    opacity: 1;
+  }
+  67.98% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+  }
+  68.4% {
+    opacity: 0;
+  }
+  68.42% {
+    opacity: 1;
+  }
+  95.98% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  96.7% {
+    opacity: 0;
+  }
+  96.72% {
+    opacity: 1;
+  }
+  98.98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  99.6% {
+    opacity: 0;
+  }
+  99.62% {
+    opacity: 1;
+  }
+}
+
+
 // visual
 
 #visual a {
   color: $color-black;
   &:hover {
-    color: $color-black;
-    background-color: $color-yellow;
+    color: $color-yellow;
+    background-color: $color-black;
   }
 }
 
-// light
+$colors: $color-red, $color-yellow, $color-white, #56D9CD, #3AA1BF;
+$max: length($colors);
+$dash: 70;
+$dash-gap: 10;
+$dash-space: $dash * ($max - 1) + $dash-gap * $max;
+$time: 10s;
+$time-step: $time/$max;
 
-.flicker-4 {
-  -webkit-animation: flicker-4 4s linear infinite both;
-          animation: flicker-4 4s linear infinite both;
+.ant-text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: $dash $dash-space;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke $time infinite linear;
+  animation: stroke $time infinite linear;
+
+  @for $item from 1 through $max {
+    &:nth-child(#{$max}n + #{$item}) {
+      $color: nth($colors, $item);
+      stroke: $color;
+      -webkit-animation-delay: -($time-step * $item);
+      animation-delay: -($time-step * $item);
+    }
+  }
 }
 
-/**
- * ----------------------------------------
- * animation flicker-4
- * ----------------------------------------
- */
-@-webkit-keyframes flicker-4 {
-  0%,
+@include keyframes(stroke) {
   100% {
-    opacity: 1;
-  }
-  31.98% {
-    opacity: 1;
-  }
-  32% {
-    opacity: 0;
-  }
-  32.8% {
-    opacity: 0;
-  }
-  32.82% {
-    opacity: 1;
-  }
-  34.98% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0;
-  }
-  35.7% {
-    opacity: 0;
-  }
-  35.72% {
-    opacity: 1;
-  }
-  36.98% {
-    opacity: 1;
-  }
-  37% {
-    opacity: 0;
-  }
-  37.6% {
-    opacity: 0;
-  }
-  37.62% {
-    opacity: 1;
-  }
-  67.98% {
-    opacity: 1;
-  }
-  68% {
-    opacity: 0;
-  }
-  68.4% {
-    opacity: 0;
-  }
-  68.42% {
-    opacity: 1;
-  }
-  95.98% {
-    opacity: 1;
-  }
-  96% {
-    opacity: 0;
-  }
-  96.7% {
-    opacity: 0;
-  }
-  96.72% {
-    opacity: 1;
-  }
-  98.98% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  99.6% {
-    opacity: 0;
-  }
-  99.62% {
-    opacity: 1;
-  }
-}
-@keyframes flicker-4 {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  31.98% {
-    opacity: 1;
-  }
-  32% {
-    opacity: 0;
-  }
-  32.8% {
-    opacity: 0;
-  }
-  32.82% {
-    opacity: 1;
-  }
-  34.98% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0;
-  }
-  35.7% {
-    opacity: 0;
-  }
-  35.72% {
-    opacity: 1;
-  }
-  36.98% {
-    opacity: 1;
-  }
-  37% {
-    opacity: 0;
-  }
-  37.6% {
-    opacity: 0;
-  }
-  37.62% {
-    opacity: 1;
-  }
-  67.98% {
-    opacity: 1;
-  }
-  68% {
-    opacity: 0;
-  }
-  68.4% {
-    opacity: 0;
-  }
-  68.42% {
-    opacity: 1;
-  }
-  95.98% {
-    opacity: 1;
-  }
-  96% {
-    opacity: 0;
-  }
-  96.7% {
-    opacity: 0;
-  }
-  96.72% {
-    opacity: 1;
-  }
-  98.98% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  99.6% {
-    opacity: 0;
-  }
-  99.62% {
-    opacity: 1;
+    stroke-dashoffset: -($dash + $dash-gap) * $max;
   }
 }
