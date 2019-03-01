@@ -208,6 +208,25 @@ $heart-off: 0.3;
   }
 }
 
+.shad:after {
+    content: attr(data-shadow);
+    position: absolute;
+    top: -0.1em; left: 0.8em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(331,74%,30%,0.5) 45%,
+        hsla(331,74%,30%,0.5) 50%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 // visual
 
