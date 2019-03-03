@@ -267,12 +267,12 @@ function drawPoint(p) {
 function checkWin() {
   var c = data[0].c;
   for (var i = 1; i < data.length; i++) {
-    if (data[1].c !== c) {
+    if (data[i].c !== c) {
       $('#win').hide();
       return;
     }
   }
-  console.log('winner');
+  //console.log('winner ' + data.length);
   $('#win').show();
 }
 

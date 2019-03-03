@@ -228,6 +228,15 @@ $heart-off: 0.3;
 }
 
 
+#light a {
+  color: $color-maroon;
+  &:hover {
+    color: $color-white;
+    background-color: $color-maroon;
+  }
+}
+
+
 // visual
 
 #visual a {
