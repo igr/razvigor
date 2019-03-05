@@ -1,6 +1,6 @@
-baseURL = "https://razvigor.com/"
+baseURL = "https://razvigor.com"
 languageCode = "en-us"
-title = "razvigor"
+title = " r a z v i g o r "
 
 [blackfriday]
   extensions = ["hardLineBreak"]
