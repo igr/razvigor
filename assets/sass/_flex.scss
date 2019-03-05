@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  align-items: flex-start;
+}
+
+.flex > .flex-column {
+  flex: 1;
+  padding: 0 0.1rem;
+}
+
+.flex > .flex-columns-2 {
+  flex: 2;
+  padding: 0 0.1rem;
+}
+
+.flex.f-center {
+	align-items: center;
+	justify-content: center;
+}
+.flex-column.f-center {
+	align-self: center;
+}

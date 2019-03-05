@@ -38,24 +38,6 @@ ready(() => {
   }
 });
 </script>
-<style type="text/css">
-body {
-  overflow: hidden;
-}
-div.background {
-	display: none;
-}
-main div.wrapper > div {
-	display: none;
-}
-main {
-  height: 100vh;
-  margin: 0;
-}
-.wrapper {
-  max-height: 500px;
-}
-</style>
 {{ end }}
 {{ define "main" }}
 
@@ -65,7 +47,7 @@ main {
 	<div id="main">
 		<b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu da se probudi.
 	</div>
-	<div id="razvigor" style="color: #fff;">
+	<div id="razvigor" class="invert">
 		<p>
 			Ime za <b>vetar</b> koji počinje da duva u rano proleće.
 		</p>
@@ -108,8 +90,8 @@ main {
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="height:20vw;bottom:0;" class="heartbeat">
 	   <polygon fill="#ff4136" points="0,100 30,100 100,0 100,100"/>
 	</svg>
-	<div class="txt r-5" style="position:absolute; top:0; font-size: 6em; white-space: nowrap;">UN<span class="heartbeat">HEART</span>ED</div>
-	<div class="txt r5" style="position:absolute; bottom:0; left:400px; font-size: 6em; white-space: nowrap; color: #ff4136;">UNHEARTED</div>
+	<div class="txt r-5" style="position:absolute; top:0; font-size: 6rem; white-space: nowrap;">UN<span class="heartbeat">HEART</span>ED</div>
+	<div class="txt r5" style="position:absolute; bottom:0; left:400px; font-size: 6rem; white-space: nowrap; color: #ff4136;">UNHEARTED</div>
 </div>
 
 <div id="visual-back" class="background" style="background-color: #ffdc00">

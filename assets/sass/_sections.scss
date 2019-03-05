@@ -18,14 +18,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10em;
+  margin-bottom: 10rem;
 }
 .wrapper {
   width: 500px;
-  margin: 2em;
+  margin: 2rem;
   grid-column: 2;
   line-height: 1.2;
-  font-size: 2em;
+  font-size: 2rem;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
@@ -61,14 +61,14 @@ div.txt {
 	color: #fff;
 }
 .grid44 {
-	margin: 2em 0;
+	margin: 2rem 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	a {
 		display: block;
 		text-align: center;
-		padding: 0.5em 0 0.3em 0;
-		font-size: 1em;
+		padding: 1rem 0 0.5rem 0;
+		font-size: 2rem;
 		font-family: $font-section;
 	}
 }

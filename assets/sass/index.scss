@@ -1,5 +1,22 @@
 @import "init/init";
 
+body {
+  overflow: hidden;
+}
+div.background {
+  display: none;
+}
+main div.wrapper > div {
+  display: none;
+}
+main {
+  height: 100vh;
+  margin: 0;
+}
+.wrapper {
+  max-height: 500px;
+}
+
 // wind
 
 @include keyframes(dash) {
@@ -211,7 +228,7 @@ $heart-off: 0.3;
 .shad:after {
     content: attr(data-shadow);
     position: absolute;
-    top: -0.1em; left: 0.8em;
+    top: -0.1rem; left: 0.8rem;
     z-index: -1;
     text-shadow: none;
     background-image:
@@ -222,7 +239,7 @@ $heart-off: 0.3;
         hsla(331,74%,30%,0.5) 50%,
         transparent 0
         );
-    background-size: .05em .05em;
+    background-size: .05rem .05rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

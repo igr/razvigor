@@ -1,7 +1,7 @@
 nav {
   position:fixed;
   top:30%;
-  right:1.5em;
+  right:3rem;
   font-family: $font-typewriter;
   text-align:right;
   @include prefix('user-select', 'none');
@@ -14,12 +14,12 @@ nav {
 
   li a {
       display: inline-block;
-      margin-bottom: 0.3em;
-      padding: 1em 1em 0.4em 1em;
+      margin-bottom: 0.3rem;
+      padding: 1rem 1rem 0.4rem 1rem;
       color: #fff;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 1em;
+      font-size: 1rem;
       background: #000;
       opacity: 0;
       visibility: hidden;
