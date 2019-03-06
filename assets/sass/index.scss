@@ -19,6 +19,10 @@ main {
 
 // wind
 
+.vetar {
+  background-color: $color-wind;
+}
+
 @include keyframes(dash) {
   0% {
     stroke-dashoffset: 800;
@@ -93,26 +97,9 @@ $heart-off: 0.3;
 // razvigor
 
 .text-pop-up-top {
-  -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-          animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @include animation("text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both");
 }
-@-webkit-keyframes text-pop-up-top {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    text-shadow: none;
-  }
-  100% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-  }
-}
-@keyframes text-pop-up-top {
+@include keyframes(text-pop-up-top) {
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -228,7 +215,7 @@ $heart-off: 0.3;
 .shad:after {
     content: attr(data-shadow);
     position: absolute;
-    top: -0.1rem; left: 0.8rem;
+    top: -0.1em; left: 0.8em;
     z-index: -1;
     text-shadow: none;
     background-image:
@@ -239,7 +226,7 @@ $heart-off: 0.3;
         hsla(331,74%,30%,0.5) 50%,
         transparent 0
         );
-    background-size: .05rem .05rem;
+    background-size: .05em .05em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

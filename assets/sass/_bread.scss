@@ -10,10 +10,22 @@
   	margin: 0;
   	display: block;
   }
-  svg path {
-  	stroke: $color-black;
+}
+.invert #breadnav {
+  background-color: $color-white;
+}
+#pinwheel {
+  &:hover {
+    @include animation("rotate-center 1s ease-in-out both infinite");
   }
-  svg:hover path {
-  	stroke: none;
+}
+@include keyframes(rotate-center) {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }

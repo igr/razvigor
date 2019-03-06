@@ -34,6 +34,12 @@ main {
 	width: 0;
 	height: 0;
 }
+.w800 .wrapper {
+	width: 800px;
+}
+.wmax .wrapper {
+	width: auto;
+}
 
 .background {
   position: fixed;
@@ -56,10 +62,6 @@ div.txt {
 	position:absolute;
 	font-family: $font-background;
 }
-.vetar {
-	background-color: $color-wind;
-	color: #fff;
-}
 .grid44 {
 	margin: 2rem 0;
 	display: grid;
@@ -67,7 +69,7 @@ div.txt {
 	a {
 		display: block;
 		text-align: center;
-		padding: 1rem 0 0.5rem 0;
+		padding: 1.5rem 0 1rem 0;
 		font-size: 2rem;
 		font-family: $font-section;
 	}
