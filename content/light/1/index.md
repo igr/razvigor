@@ -1,64 +1,37 @@
 ---
-bodyClass: "color-bg-blackhole invert wmax"
+bodyClass: "color-bg-blackhole invert"
 ---
+<style>
+.stripe {
+ text-align: right;
+ background-color: rgba(255,255,255, 0.9);
+ padding: 0.5rem 2rem;
+ position: relative;
+ color: #000;
+ font-weight: bold;
+}
+a {
+	color: #fff;
+}
+</style>
 
-{{% flex %}}
-{{% flex-column %}}
-	{{% img "1-pisa.jpg" %}}
-{{% /flex-column %}}
-{{% flex-column "f-center" %}}
-brutalno
-{{% /flex-column %}}
-{{% /flex %}}
+<div style="top: 160px; right: 200px;" class="stripe">brutalno</div>
+{{% img500px "1-pisa.jpg" "157754185" %}}
 
-{{% flex %}}
-{{% flex-column "f-center" %}}
-oduzimanje
-{{% /flex-column %}}
-{{% flex-column %}}
-	{{% img "2-pobednik.jpg" %}}
-{{% /flex-column %}}
-{{% /flex %}}
+<div style="top: 160px; right: 400px;" class="stripe">oduzimanje</div>
+{{% img500px "2-pobednik.jpg" "212740341" %}}
 
-{{% flex %}}
-{{% flex-column %}}
-	{{% img "3-bg.jpg" %}}
-{{% /flex-column %}}
-{{% flex-column "f-center" %}}
-neba
-{{% /flex-column %}}
-{{% /flex %}}
+<div style="top: 160px; right: 200px;" class="stripe">neba</div>
+{{% img500px "3-bg.jpg" "219841671" %}}
 
-{{% flex %}}
-{{% flex-column "f-center" %}}
-je renesansa
-{{% /flex-column %}}
-{{% flex-column %}}
-	{{% img "4-nbg.jpg" %}}
-{{% /flex-column %}}
-{{% /flex %}}
+<div style="top: 160px; right: 400px;" class="stripe">je renesansa</div>
+{{% img500px "4-nbg.jpg" "202711493" %}}
 
-{{% flex %}}
-{{% flex-column %}}
-	{{% img "5-genex.jpg" %}}
-{{% /flex-column %}}
-{{% flex-column "f-center" %}}
-preostalih
-{{% /flex-column %}}
-{{% /flex %}}
+<div style="top: 160px; right: 200px;" class="stripe">preostalih</div>
+{{% img500px "5-genex.jpg" "189097537" %}}
 
-{{% flex %}}
-{{% flex-column "f-center" %}}
-linija
-{{% /flex-column %}}
-{{% flex-column %}}
-	{{% img "6-la.jpg" %}}
-{{% /flex-column %}}
-{{% /flex %}}
+<div style="top: 160px; right: 300px;" class="stripe">linija</div>
+{{% img500px "6-la.jpg" "211945665" %}}
 
-{{% flex %}}
-{{% flex-column "f-center" %}}
-<br><br><br>
-i, stoga, kraj.
-{{% /flex-column %}}
-{{% /flex %}}
+<br><br><br><br>
+...i, stoga, kraj.
