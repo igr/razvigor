@@ -34,33 +34,9 @@ main {
 	width: 0;
 	height: 0;
 }
-.w800 .wrapper {
-	width: 800px;
-}
+
 .wmax .wrapper {
 	width: auto;
-}
-
-.background {
-  position: fixed;
-  top: 0;
-  z-index: -10;
-  width: 100%;
-  height: 100%;
-}
-.background svg {
-  position: absolute;
-  width: 100%;
-}
-div.txt {
-	text-transform: uppercase;
-	font-size: 260px;
-	color: $color-white;
-	font-weight: 900;
-	text-align: center;
-	width: 100%;
-	position:absolute;
-	font-family: $font-background;
 }
 .grid44 {
 	margin: 2rem 0;
