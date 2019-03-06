@@ -120,7 +120,7 @@ $heart-off: 0.3;
 // unhearted
 
 #unhearted a {
-  color: $color-red;
+  color: $color-black;
   &:hover {
     color: $color-white;
     background-color: $color-red;
@@ -233,7 +233,7 @@ $heart-off: 0.3;
 
 
 #light a {
-  color: $color-maroon;
+  color: $color-black;
   &:hover {
     color: $color-white;
     background-color: $color-maroon;
