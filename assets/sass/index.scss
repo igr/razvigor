@@ -301,6 +301,9 @@ $heart-off: 0.3;
     background-color: $color-black;
   }
 }
+#visual-txt2 {
+  height: 300px;
+}
 
 $colors: $color-red, $color-yellow, $color-white, #56D9CD, #3AA1BF;
 $max: length($colors);
