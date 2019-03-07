@@ -11,16 +11,16 @@
   	display: block;
   }
 }
-.invert #breadnav {
-  background-color: $color-white;
+.invert #breadnav svg {
+  fill: #fff;
 }
 #pinwheel {
   &:hover {
-    @include animation("rotate-center 1s ease-in-out both infinite");
+    @include animation("rotate-center 2s ease-in-out both infinite");
   }
 }
 @include keyframes(rotate-center) {
-  0% {
+  30% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
