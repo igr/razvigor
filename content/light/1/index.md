@@ -33,5 +33,3 @@ a {
 <div style="top: 160px; right: 30%;" class="stripe">linija</div>
 {{% img500px "6-la.jpg" "211945665" %}}
 
-<br><br><br><br>
-...i, stoga, kraj.
