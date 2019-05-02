@@ -1,0 +1,40 @@
+#breadnav {
+  position: fixed;
+  z-index: 100;
+  width: 80px;
+  left: 4px;
+  top: 4px;
+  line-height: 0;
+
+  a {
+    padding: 0;
+    margin: 0;
+    display: block;
+    float: left;
+  }
+
+  a.arrow {
+    margin-top: 10px;
+  }
+}
+
+.invert #breadnav svg {
+  fill: #fff;
+}
+
+#pinwheel {
+  &:hover {
+    @include animation("rotate-center 2s ease-in-out both infinite");
+  }
+}
+
+@include keyframes(rotate-center) {
+  30% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,349 @@
+{% block head %}
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #e7e7e7;
+    }
+
+    #win {
+      display: none;
+    }
+
+    canvas {
+      width: 640px;
+      height: 640px;
+    }
+
+    @media (max-width: 720px) {
+      canvas {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      canvas {
+        width: 330px;
+        height: 330px;
+      }
+
+      div {
+        bottom: 20px;
+      }
+    }
+  </style>
+{% endblock %}
+{% block main %}
+  <main>
+    <div class="wrapper" style="width:640px">
+      <canvas id="theCanvas"></canvas>
+      <div id="win" class="center">your heart is now complete.</div>
+    </div>
+  </main>
+
+  <script>
+    function resizeCanvasToDisplaySize(canvas) {
+      // look up the size the canvas is being displayed
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+
+      // If it's resolution does not match change it
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+        return true;
+      }
+      return false;
+    }
+
+    (function () {
+      var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      window.requestAnimationFrame = requestAnimationFrame;
+    })();
+
+    var ratioX = 1.5;
+    var ratioY = 1.5;
+    var offsetX = -40;
+    var offsetY = 30;
+    var canvas;
+    var ctx;
+    var cWidth;
+    var cHeight;
+
+    var colors = [
+      "#E00B0B", "#EC585E", "#A02728", "#EA7853", "#FF0405", "#C81763"
+    ]
+    var tris = [
+      [128.88, 87.5, 92.25, 118.63, 181.63, 81.88, 128.88, 87.5],
+      [92.25, 118.63, 129.88, 123.63, 181.63, 81.88, 92.25, 118.63],
+      [129.88, 123.63, 155.1, 146.08, 181.63, 81.88, 129.88, 123.63],
+      [155.1, 146.08, 210.37, 144.96, 181.63, 81.88, 155.1, 146.08],
+      [113, 154.83, 155.1, 146.08, 129.88, 123.63, 113, 154.83],
+      [79.33, 161.5, 129.88, 123.63, 92.25, 118.63, 79.33, 161.5],
+      [113, 154.83, 129.88, 123.63, 79.33, 161.5, 113, 154.83],
+      [236.5, 119.5, 181.63, 81.88, 210.37, 144.96, 236.5, 119.5],
+      [236.5, 119.5, 210.37, 144.96, 288, 123.63, 236.5, 119.5],
+      [79.33, 161.5, 91.06, 221.5, 104.6, 194, 79.33, 161.5],
+      [79.33, 161.5, 104.6, 194, 113, 154.83, 79.33, 161.5],
+      [236.5, 119.5, 288, 123.63, 272.33, 86.33, 236.5, 119.5],
+      [155.1, 146.08, 136.94, 212, 176.33, 173, 155.1, 146.08],
+      [210.37, 144.96, 274.67, 168.5, 288, 123.63, 210.37, 144.96],
+      [113, 154.83, 136.94, 212, 155.1, 146.08, 113, 154.83],
+      [272.33, 86.33, 288, 123.63, 334.83, 86.33, 272.33, 86.33],
+      [210.37, 144.96, 155.1, 146.08, 176.33, 173, 210.37, 144.96],
+      [288, 123.63, 345, 134.17, 334.83, 86.33, 288, 123.63],
+      [113, 154.83, 104.6, 194, 136.94, 212, 113, 154.83],
+      [345, 134.17, 388.5, 130.5, 334.83, 86.33, 345, 134.17],
+      [218.33, 183.42, 210.37, 144.96, 176.33, 173, 218.33, 183.42],
+      [274.67, 168.5, 345, 134.17, 288, 123.63, 274.67, 168.5],
+      [104.6, 194, 91.06, 221.5, 136.94, 212, 104.6, 194],
+      [274.67, 168.5, 210.37, 144.96, 218.33, 183.42, 274.67, 168.5],
+      [176.33, 173, 136.94, 212, 184.33, 212, 176.33, 173],
+      [317.33, 166.33, 345, 134.17, 274.67, 168.5, 317.33, 166.33],
+      [176.33, 173, 184.33, 212, 218.33, 183.42, 176.33, 173],
+      [345, 134.17, 365.33, 164.19, 388.5, 130.5, 345, 134.17],
+      [91.06, 221.5, 128, 267.83, 136.94, 212, 91.06, 221.5],
+      [260, 199.67, 299.17, 198.33, 274.67, 168.5, 260, 199.67],
+      [317.33, 166.33, 365.33, 164.19, 345, 134.17, 317.33, 166.33],
+      [299.17, 198.33, 317.33, 166.33, 274.67, 168.5, 299.17, 198.33],
+      [136.94, 212, 128, 267.83, 148.5, 288.83, 136.94, 212],
+      [184.33, 212, 252.33, 239.92, 218.33, 183.42, 184.33, 212],
+      [184.33, 212, 160, 239.92, 136.94, 212, 184.33, 212],
+      [274.67, 168.5, 260, 199.67, 218.33, 183.42, 274.67, 168.5],
+      [365.33, 164.19, 389.83, 192.5, 388.5, 130.5, 365.33, 164.19],
+      [299.17, 198.33, 323.67, 217, 317.33, 166.33, 299.17, 198.33],
+      [260, 199.67, 252.33, 239.92, 218.33, 183.42, 260, 199.67],
+      [148.5, 288.83, 160, 239.92, 136.94, 212, 148.5, 288.83],
+      [323.67, 217, 365.33, 164.19, 317.33, 166.33, 323.67, 217],
+      [252.33, 239.92, 299.17, 198.33, 260, 199.67, 252.33, 239.92],
+      [184.33, 212, 194.33, 249.33, 160, 239.92, 184.33, 212],
+      [366.75, 201.05, 389.83, 192.5, 365.33, 164.19, 366.75, 201.05],
+      [252.33, 239.92, 194.33, 249.33, 184.33, 212, 252.33, 239.92],
+      [366.75, 201.05, 370.67, 236, 389.83, 192.5, 366.75, 201.05],
+      [323.67, 217, 366.75, 201.05, 365.33, 164.19, 323.67, 217],
+      [194.33, 249.33, 148.5, 288.83, 160, 239.92, 194.33, 249.33],
+      [252.33, 239.92, 323.67, 217, 299.17, 198.33, 252.33, 239.92],
+      [323.67, 217, 327.67, 244, 366.75, 201.05, 323.67, 217],
+      [194.33, 249.33, 252.33, 239.92, 148.5, 288.83, 194.33, 249.33],
+      [252.33, 239.92, 327.67, 244, 323.67, 217, 252.33, 239.92],
+      [327.67, 244, 370.67, 236, 366.75, 201.05, 327.67, 244],
+      [252.33, 239.92, 218.33, 279.67, 148.5, 288.83, 252.33, 239.92],
+      [327.67, 244, 314.83, 297, 370.67, 236, 327.67, 244],
+      [252.33, 239.92, 289.17, 268.67, 327.67, 244, 252.33, 239.92],
+      [289.17, 268.67, 314.83, 297, 327.67, 244, 289.17, 268.67],
+      [252.33, 297.83, 218.33, 279.67, 252.33, 239.92, 252.33, 297.83],
+      [289.17, 268.67, 252.33, 297.83, 252.33, 239.92, 289.17, 268.67],
+      [218.33, 279.67, 180.33, 315.33, 148.5, 288.83, 218.33, 279.67],
+      [252.33, 297.83, 314.83, 297, 289.17, 268.67, 252.33, 297.83],
+      [223.5, 313.17, 180.33, 315.33, 218.33, 279.67, 223.5, 313.17],
+      [252.33, 297.83, 223.5, 313.17, 218.33, 279.67, 252.33, 297.83],
+      [277.17, 325, 314.83, 297, 252.33, 297.83, 277.17, 325],
+      [223.5, 313.17, 207.67, 333.67, 180.33, 315.33, 223.5, 313.17],
+      [223.5, 313.17, 207.67, 333.67, 235.33, 351.5, 223.5, 313.17],
+      [252.33, 297.83, 235.33, 351.5, 277.17, 325, 252.33, 297.83],
+      [235.33, 351.5, 252.33, 297.83, 223.5, 313.17, 235.33, 351.5],
+    ];
+    var data = [];
+
+    function draw(t, d) {
+      if (d.d != 0) {
+        d.d = d.d - 1;
+        return;
+      }
+
+      var x1 = t[0] * ratioX + offsetX;
+      var y1 = t[1] * ratioY + offsetY;
+      var x2 = t[2] * ratioX + offsetX;
+      var y2 = t[3] * ratioY + offsetY;
+      var x3 = t[4] * ratioX + offsetX;
+      var y3 = t[5] * ratioY + offsetY;
+
+      d.t = [x1, y1, x2, y2, x3, y3];
+
+      if (d.p < 100) {
+        x3 = x2 + (x3 - x2) * d.p / 100;
+        y3 = y2 + (y3 - y2) * d.p / 100;
+        d.p = d.p + d.s;
+      }
+
+      var path = new Path2D();
+
+      path.moveTo(x1, y1);
+      path.lineTo(x2, y2);
+      path.lineTo(x3, y3);
+
+      ctx.fillStyle = d.c;
+      ctx.fill(path);
+    }
+
+    function drawScene() {
+      var done = true;
+      for (len = tris.length, i = 0; i < len; i++) {
+        if (data[i].p < 100) {
+          done = false;
+        }
+        draw(tris[i], data[i]);
+      }
+      return done;
+    }
+
+    function drawBackground() {
+      var x = cWidth / 2;
+      var y = cHeight / 2;
+
+      var gradient = ctx.createRadialGradient(x, y, cWidth * 0.35, x, y, cWidth * 0.5);
+
+      gradient.addColorStop(0, '#ffffff');
+      gradient.addColorStop(1, '#e7e7e7');
+
+      ctx.arc(x, y, cWidth / 2, 0, 2 * Math.PI);
+      ctx.fillStyle = gradient;
+      //ctx.stroke();
+      ctx.fill();
+    }
+
+    function rndColor(i) {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function prepareData() {
+      for (len = tris.length, i = 0; i < len; ++i) {
+        data[i] = {
+          p: 0, // percentage done, 0-100
+          s: 5 + 2 * Math.floor(Math.random() * 5),      // unfold speed
+          d: i * Math.floor(Math.random() * 2),   // delta delay
+          c: rndColor(i),  // color
+          t: [],  // calculated triangle
+        };
+      }
+    }
+
+    function getMousePos(evt, canvas) {
+      var rect = canvas.getBoundingClientRect(), // abs. size of element
+        scaleX = canvas.width / rect.width,    // relationship bitmap vs. element for X
+        scaleY = canvas.height / rect.height;  // relationship bitmap vs. element for Y
+
+      return {
+        x: (evt.clientX - rect.left) * scaleX,   // scale mouse coordinates after they have
+        y: (evt.clientY - rect.top) * scaleY     // been adjusted to be relative to element
+      }
+    }
+
+    function is_in_triangle(px, py, ax, ay, bx, by, cx, cy) {
+      var v0 = [cx - ax, cy - ay];
+      var v1 = [bx - ax, by - ay];
+      var v2 = [px - ax, py - ay];
+
+      var dot00 = (v0[0] * v0[0]) + (v0[1] * v0[1]);
+      var dot01 = (v0[0] * v1[0]) + (v0[1] * v1[1]);
+      var dot02 = (v0[0] * v2[0]) + (v0[1] * v2[1]);
+      var dot11 = (v1[0] * v1[0]) + (v1[1] * v1[1]);
+      var dot12 = (v1[0] * v2[0]) + (v1[1] * v2[1]);
+
+      var invDenom = 1 / (dot00 * dot11 - dot01 * dot01);
+
+      var u = (dot11 * dot02 - dot01 * dot12) * invDenom;
+      var v = (dot00 * dot12 - dot01 * dot02) * invDenom;
+
+      return ((u >= 0) && (v >= 0) && (u + v < 1));
+    }
+
+    function findTriangle(c) {
+      if (!data) {
+        return -1;
+      }
+      for (len = data.length, i = 0; i < len; i++) {
+        var d = data[i];
+        if (is_in_triangle(c.x, c.y, d.t[0], d.t[1], d.t[2], d.t[3], d.t[4], d.t[5])) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    function drawPoint(p) {
+      ctx.fillStyle = "#F00";
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 5, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+
+
+    // check if we won!
+    function checkWin() {
+      var c = data[0].c;
+      for (var i = 1; i < data.length; i++) {
+        if (data[i].c !== c) {
+          $('#win').hide();
+          return;
+        }
+      }
+      //console.log('winner ' + data.length);
+      $('#win').show();
+    }
+
+    function doMouseDown(event) {
+      var c = getMousePos(event, canvas);
+//  drawPoint(c);
+      var i = findTriangle(c);
+      if (i == -1) {
+        return;
+      }
+      data[i].p = 0;
+      data[i].c = rndColor(i);
+      go(false);
+      checkWin();
+    }
+
+    var drawing = false;
+
+    function go(first) {
+      if (drawing) {
+        return;
+      }
+      if (first) {
+        prepareData();
+      }
+      drawing = true;
+
+      function repeatOften() {
+        drawBackground();
+        var done = drawScene();
+        var id = requestAnimationFrame(repeatOften);
+        if (done) {
+          drawing = false;
+          cancelAnimationFrame(id);
+        }
+      }
+
+      requestAnimationFrame(repeatOften);
+    }
+
+
+    $(document).ready(function () {
+      canvas = document.getElementById('theCanvas');
+      resizeCanvasToDisplaySize(canvas);
+      if (canvas.getContext) {
+        ctx = canvas.getContext('2d');
+        cWidth = canvas.width;
+        cHeight = canvas.height;
+
+        if (cWidth < 640) {
+          var d = cWidth / 640;
+          ratioX = ratioX * d;
+          ratioY = ratioY * d;
+          offsetX = offsetX * d;
+          offsetY = offsetY * d;
+        }
+
+        canvas.addEventListener("mousedown", doMouseDown, false);
+        drawBackground();
+        go(true);
+      }
+    });
+  </script>
+{% endblock %}
