@@ -8,12 +8,15 @@ const __ = function (selector) {
 };
 
 // waiting for document to be ready
-function ready(fn) {
-  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
+function ready(callback) {
+  // in case the document is already rendered
+  if (document.readyState !== 'loading') callback();
+  // modern browsers
+  else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+  // IE <= 8
+  else document.attachEvent('onreadystatechange', function () {
+      if (document.readyState === 'complete') callback();
+    });
 }
 
 // adds a class
