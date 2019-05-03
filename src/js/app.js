@@ -1,11 +1,12 @@
 "use strict";
 
-const _ = function (selector) {
+function _(selector) {
   return document.querySelector(selector);
-};
-const __ = function (selector) {
+}
+
+function __(selector) {
   return document.querySelectorAll(selector);
-};
+}
 
 // waiting for document to be ready
 function ready(callback) {
