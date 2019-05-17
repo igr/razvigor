@@ -1,0 +1,110 @@
+{% block head %}
+  <script src="./two.min.js"></script>
+  <script>
+
+    function getPositions(angle, orbit) {
+      return {
+        x: Math.cos(angle * Math.PI / 180) * orbit,
+        y: Math.sin(angle * Math.PI / 180) * orbit
+      };
+    }
+
+    ready(() => {
+      // Make an instance of two and place it on the page.
+      const elem = document.getElementById('playground');
+      const params = {fullscreen: true};
+      const two = new Two(params).appendTo(elem);
+
+      const numX = 4;
+      const numY = 3;
+
+      const deltaX = two.width / numX;
+      const deltaY = two.height / numY;
+
+      let radius = deltaX * 0.6;
+      if (deltaY * 0.6 > radius) {
+        radius = deltaY * 0.6;
+      }
+
+      const circles = [];
+      let text;
+      let yellowCircle;
+
+      let count = 0;
+      for (let y = 0; y <= numY; y++) {
+        for (let x = 0; x <= numX; x++) {
+          const pointX = x * deltaX;
+          const pointY = y * deltaY;
+          const circle = two.makeCircle(pointX, pointY, radius);
+          circles.push({
+            circle: circle,
+            x: pointX,
+            y: pointY,
+            a: 0,
+            i: count
+          });
+
+          if (count % 2 === 0) {
+            circle.fill = '#df0025';
+          } else {
+            circle.fill = '#08b1df';
+          }
+
+          if (count === 13) {
+            circle.fill = '#f8c428';
+            yellowCircle = circle;
+            text = two.makeText("YOU", pointX, pointY);
+            text.size = 26;
+            text.weight = 700;
+            text.fill = '#fff';
+            text.family= "Lato";
+          }
+          count += 1;
+          circle.opacity = 0.8;
+          circle.noStroke();
+        }
+      }
+
+      let clicked = false;
+      // Don't forget to tell two to render everything to the screen
+      two.update();
+      yellowCircle._renderer.elem.addEventListener('click', () => {
+        clicked = !clicked;
+      }, false);
+
+      two.bind('update', frameCount => {
+        let count = 0;
+        for (c of circles) {
+          const pos = getPositions((c.a * c.i) / 2, 30);
+          c.a += 1;
+          if (count === 13) {
+            c.circle.translation.x = c.x - pos.x;
+            c.circle.translation.y = c.y + pos.y;
+          }
+          else {
+            c.circle.translation.x = c.x + pos.x;
+            c.circle.translation.y = c.y + pos.y;
+            if (clicked) {
+              c.circle.opacity = 0.1;
+              text.visible = false;
+            }
+            else {
+              c.circle.opacity = 0.8;
+              text.visible = true;
+            }
+          }
+          count += 1;
+        }
+
+      }).play();
+
+    });
+  </script>
+{% endblock %}
+{% block main %}
+
+  <div id="playground" style="width: 100%; height: 100vh;">
+
+  </div>
+
+{% endblock %}

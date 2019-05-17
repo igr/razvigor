@@ -45,6 +45,14 @@ Spig
   .htmlMinify()
 ;
 
+// MISC RESOURCES
+
+Spig
+  .on('/**/*.js')
+
+  ._("PREPARE")
+  .assetCommon();
+
 
 // IMAGES
 
