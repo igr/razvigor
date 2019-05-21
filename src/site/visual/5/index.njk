@@ -1,6 +1,7 @@
 {% block head %}
   <script src="./two.min.js"></script>
   <script>
+    let two;
 
     function getPositions(angle, orbit) {
       return {
@@ -9,10 +10,48 @@
       };
     }
 
+    function rnd(max) {
+      return Math.floor(Math.random() * max - max/2);
+    }
+
+    function makeSubCircles(group, x, y, r, color) {
+      const subCircles = [];
+      for (let i = 0; i < 10; i++) {
+        const x_rnd = x + rnd(r/5);
+        const y_rnd = y + rnd(r/10);
+        const c = two.makeCircle(x_rnd, y_rnd, r/2 + rnd(r/2));
+        c.fill = "transparent";
+        c.stroke = color;
+        c.linewidth = 6 + rnd(5);
+        c.x = x_rnd;
+        c.y = y_rnd;
+
+        group.add(c);
+        subCircles.push(c);
+      }
+
+      return subCircles;
+    }
+
+    function moveSubs(subs, x, y) {
+      let ndx = 0;
+      for (const c of subs) {
+        if (ndx % 2 === 0) {
+          c.translation.x = c.x + x / 2 + ndx * 4;
+          c.translation.y = c.y + y / 2 + ndx * 2;
+        }
+        else {
+          c.translation.x = c.x - x / 2 + ndx * 4;
+          c.translation.y = c.y - y / 2 + ndx * 2;
+        }
+        ndx += 1;
+      }
+    }
+
     ready(() => {
       // Make an instance of two and place it on the page.
       const elem = document.getElementById('playground');
-      const two = new Two({
+      two = new Two({
         fullscreen: true,
         antialias: true
       }).appendTo(elem);
@@ -41,19 +80,20 @@
           const pointX = x * deltaX;
           const pointY = y * deltaY;
           const circle = two.makeCircle(pointX, pointY, radius);
-          circles.push({
-            circle: circle,
-            x: pointX,
-            y: pointY,
-            a: 0,
-            i: count
-          });
-
           if (count % 2 === 0) {
             circle.fill = '#df0025';
           } else {
             circle.fill = '#08b1df';
           }
+          const currentCircle = {
+            circle: circle,
+            x: pointX,
+            y: pointY,
+            a: 0,
+            i: count
+          };
+
+          circles.push(currentCircle);
 
           if (count === 13) {
             foreground.add(circle);
@@ -66,6 +106,7 @@
             text.family= "Lato";
           } else {
             background.add(circle);
+            currentCircle.subs = makeSubCircles(background, pointX, pointY, radius, circle.fill);
           }
           count += 1;
           circle.opacity = 0.8;
@@ -92,12 +133,19 @@
           else {
             c.circle.translation.x = c.x + pos.x;
             c.circle.translation.y = c.y + pos.y;
+            moveSubs(c.subs, pos.x, pos.y);
             if (clicked) {
               c.circle.opacity = 0.1;
+              for (const cc of c.subs) {
+                cc.visible = false;
+              }
               text.visible = false;
             }
             else {
               c.circle.opacity = 0.8;
+              for (const cc of c.subs) {
+                cc.visible = true;
+              }
               text.visible = true;
             }
           }

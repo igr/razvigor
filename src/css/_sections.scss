@@ -51,6 +51,8 @@ main {
 	}
 }
 #signature {
+  letter-spacing: 8px;
   text-align: right;
-  margin: 40px 20px;
+  margin: 60px 20px 20px 20px;
+  color: $color-black;
 }

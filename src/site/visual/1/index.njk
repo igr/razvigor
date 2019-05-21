@@ -27,7 +27,9 @@
         <canvas id="theCanvas"></canvas>
       </div>
       <p class="center">breath in & out</p>
-      <p class="small center">Follow the pattern. It's made to disrupt your flow.</p>
+      <p class="small center">
+        To control the breathing is to control the mind. With different patterns of breathing, you can <a href="#" onclick="love(); return false">fall in love</a>, you can <a href="#" onclick="hate(); return true;">hate</a>  someone, you can feel the whole spectrum of feelings by changing your breathing.<br>- Marina Abramović
+      </p>
 
     </div>
   </main>
@@ -46,28 +48,65 @@
       return false;
     }
 
+    const circle = [];
+
+    let speedOut = 4;
+    let holdOut = 2000;
+    let speedIn = 10;
+    let holdIn  = 4000;
+    let change = true;
+
+    function love() {
+      speedOut = 2;
+      holdOut = 4000;
+      speedIn = 2;
+      holdIn = 1000;
+      change = true;
+    }
+
+    function hate() {
+      speedOut = 20;
+      holdOut = 1000;
+      speedIn = 20;
+      holdIn = 1000;
+      change = true;
+    }
+
+    function update() {
+      if (!change) {
+        return;
+      }
+      const total = circle.length;
+      for (let i = 0; i < total; i++) {
+        const tx = Math.sin(i * 2 * Math.PI / total) * 70;
+        const ty = Math.cos(i * 2 * Math.PI / total) * 70;
+        createjs.Tween.get(circle[i], {loop: true, override:true})
+          .to({x: tx, y: ty}, holdOut, createjs.Ease.getPowInOut(speedOut))
+          .to({x: 0, y: 0}, holdIn, createjs.Ease.getPowInOut(speedIn))
+          .call(update);
+      }
+      change = false;
+    }
+
     function go() {
-      var canvas = document.getElementById('theCanvas');
+      const canvas = document.getElementById('theCanvas');
       resizeCanvasToDisplaySize(canvas);
-      var ctx = canvas.getContext('2d');
-      var cWidth = canvas.width;
-      var cHeight = canvas.height;
-      var stage = new createjs.Stage("theCanvas");
-      var circle = new Array(6);
-      var total = 12;
-      for (i = 0; i < total; i++) {
+      const ctx = canvas.getContext('2d');
+      const cWidth = canvas.width;
+      const cHeight = canvas.height;
+      const stage = new createjs.Stage("theCanvas");
+
+      const total = 12;
+      //const circle = [];
+      for (let i = 0; i < total; i++) {
         circle[i] = new createjs.Shape();
-        var trans = (2 / total);
+        const trans = (2 / total);
         circle[i].graphics
           .beginFill("rgba(255,0,30," + trans + ")")
           .drawCircle(cWidth / 2, cHeight / 2, 100);
         stage.addChild(circle[i]);
-        var tx = Math.sin(i * 2 * Math.PI / total) * 70;
-        var ty = Math.cos(i * 2 * Math.PI / total) * 70;
-        createjs.Tween.get(circle[i], {loop: true})
-          .to({x: tx, y: ty}, 2000, createjs.Ease.getPowInOut(4))
-          .to({x: 0, y: 0}, 2000, createjs.Ease.getPowInOut(10));
       }
+      update();
       stage.update();
       createjs.Ticker.setFPS(60);
       createjs.Ticker.addEventListener("tick", stage);
