@@ -1,0 +1,105 @@
+@import "init/init";
+
+.r-5 {
+  @include prefix('transform', 'rotate(5deg)');
+}
+.r-10 {
+  @include prefix('transform', 'rotate(10deg)');
+}
+.r5 {
+  @include prefix('transform', 'rotate(-5deg)');
+}
+.r10 {
+  @include prefix('transform', 'rotate(-10deg)');
+}
+.r15 {
+  @include prefix('transform', 'rotate(-15deg)');
+}
+
+// HEART
+
+$heart-scale: 1.2;
+$heart-off: 0.3;
+
+@include keyframes(heartbeat) {
+  0% {
+    @include prefix(transform, scale(1));
+    opacity: 1;
+  }
+  7% {
+    @include prefix(transform, scale($heart-scale));
+    opacity: $heart-off;
+  }
+  14% {
+    @include prefix(transform, scale(1));
+    opacity: 1;
+  }
+  21% {
+    @include prefix(transform, scale($heart-scale));
+    opacity: $heart-off;
+  }
+  35% {
+    @include prefix(transform, scale(1));
+    opacity: 1;
+  }
+}
+
+
+.background {
+  position: fixed;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+.background svg {
+  position: absolute;
+  width: 100%;
+  height:40vw;
+}
+
+
+
+/* :not(:required) hides this rule from IE9 and below */
+.heartbeat:not(:required) {
+  @include animation("heartbeat 2600ms ease 0s infinite normal");
+  display: inline-block;
+}
+
+.txt {
+  text-transform: uppercase;
+  color: $color-white;
+  font-weight: 900;
+  text-align: center;
+  width: 100%;
+  position:absolute;
+  font-family: $font-background;
+  white-space: nowrap;
+}
+.txt-unhearted {
+  font-size: 6rem;
+}
+.txt-unhearted2 {
+  font-size: 5rem;
+  text-align: right;
+  bottom:0;
+  right:0;
+  color: $color-red;
+}
+
+@include for-tablet {
+  .txt-unhearted {
+    font-size: 4rem;
+    top:0;
+  }
+  .txt-unhearted2 {
+    font-size: 2.5rem;
+    left:50px;
+    bottom: 40px;
+  }
+  #unhearted-back svg {
+    height:80vw;
+    left: -20%;
+    width: 120%;
+  }
+}

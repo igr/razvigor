@@ -1,0 +1,4 @@
+{
+  "layout": "sections/light.njk",
+  "bodyClass": "color-bg-blackhole invert"
+}

@@ -1,10 +1,10 @@
-{% extends "../base.njk" %}
+{% extends "base.njk" %}
 {% block main %}
 
   <main>
     <div class="wrapper">
       {{ content | safe }}
-      {% include "../partials/signature.html" %}
+      {% include "partials/signature.html" %}
     </div>
   </main>
 

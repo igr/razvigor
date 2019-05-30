@@ -11,6 +11,16 @@
     margin: 0;
     display: block;
     float: left;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  .arrow_empty {
+    padding: 0;
+    margin: 10px 0 0 0;
+    float: left;
+    width: 20px;
+    display: block;
   }
 
   a.arrow {

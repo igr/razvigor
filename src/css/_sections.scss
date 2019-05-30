@@ -1,43 +1,22 @@
-.r-5 {
-	@include prefix('transform', 'rotate(5deg)');
-}
-.r-10 {
-	@include prefix('transform', 'rotate(10deg)');
-}
-.r5 {
-	@include prefix('transform', 'rotate(-5deg)');
-}
-.r10 {
-	@include prefix('transform', 'rotate(-10deg)');
-}
-.r15 {
-	@include prefix('transform', 'rotate(-15deg)');
-}
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10rem;
+  height: 100vh;
+  margin: 0;
 }
+
 .wrapper {
   width: 500px;
-  margin: 2rem;
-  grid-column: 2;
   line-height: 1.2;
   font-size: 2rem;
-  overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
-}
-.wrapper::-webkit-scrollbar { /* WebKit */
-	width: 0;
-	height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
 }
 
 .wmax .wrapper {
 	width: auto;
 }
+
 .grid44 {
 	margin: 2rem 0;
 	display: grid;
@@ -50,6 +29,7 @@ main {
 		font-family: $font-section;
 	}
 }
+
 #signature {
   letter-spacing: 8px;
   text-align: right;

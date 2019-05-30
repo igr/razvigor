@@ -53,8 +53,12 @@ code {
 	display: block !important;
 }
 a {
-  color: $color-red;
+  color: $color-black;
 	text-decoration: none;
+  &:hover {
+    color: $color-white;
+    background-color: $color-black;
+  }
 }
 img {
 	width: 100%;

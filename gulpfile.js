@@ -9,20 +9,13 @@ const findSectionMax = (page) => {
   const chunks = page.path.split('/');
   if (chunks.length > 2) {
     // section
-    const sectionName = chunks[1];
     if (!SpigConfig.site.max) {
-      SpigConfig.site.max = {};
+      SpigConfig.site.max = 0;
     }
-    let val = SpigConfig.site.max[sectionName];
-    const pageNo = parseInt(chunks[2], 10);
-    if (!val) {
-      val = pageNo;
-    } else {
-      if (pageNo > val) {
-        val = pageNo;
-      }
+    const pageNo = parseInt(chunks[1], 10);
+    if (pageNo > SpigConfig.site.max) {
+      SpigConfig.site.max = pageNo;
     }
-    SpigConfig.site.max[sectionName] = val;
   }
 };
 
@@ -35,7 +28,6 @@ Spig
   ._("PREPARE")
   .pageCommon()
   .collect('tags')
-  .readingTime()
   .use(findSectionMax)
 
   ._("RENDER")

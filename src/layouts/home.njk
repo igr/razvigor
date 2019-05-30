@@ -3,155 +3,37 @@
 
 {% block head %}
   <link rel='stylesheet' href='/css/index.css' type='text/css' media='all'/>
-  <script type="module">
-
-    function animate(items, clazz) {
-      (function show(counter) {
-        setTimeout(function () {
-          items[counter].classList.add(clazz);
-          counter++;
-          if (counter < items.length) show(counter);
-        }, 50);
-      })(0);
-    }
-
-    function showSection(name) {
-      removeClass(_('main div.show'), 'show');
-      addClass(_('#' + name), 'show');
-      removeClass(_('.background.show'), 'show');
-      addClass(_('#' + name + '-back'), 'show');
-    }
-
+  <script>
     ready(() => {
-      const links = __('nav a');
-      animate(links, 'view');
-      Array.prototype.forEach.call(links, function (el, i) {
-        el.addEventListener('click', event => {
-          showSection(el.textContent);
-          pushHash(el.textContent);
-          event.preventDefault();
-        })
-      });
-      if (window.location.hash) {
-        var hash = window.location.hash.substring(1);
-        showSection(hash);
-      } else {
-        addClass(_('#main'), 'show');
-      }
+      // const links = __('#razvigor');
+      // animate(links, 'show');
+      // Array.prototype.forEach.call(links, function (el, i) {
+      //   el.addEventListener('click', event => {
+      //     showSection(el.textContent);
+      //     pushHash(el.textContent);
+      //     event.preventDefault();
+      //   })
+      // });
     });
   </script>
 {% endblock %}
 {% block main %}
 
-  {% include "partials/nav.html" %}
-
   <main>
-    <div class="wrapper">
-      <div id="main">
-        <b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. Ovaj vetar budi prirodu, i biljke i
+    <div class="txt text-pop-up-top" style="position: fixed">RAZVIGOR</div>
+    <div class="wrapper" style="margin-top: 200px;">
+      <p>
+        <b>Razvigor</b> - je ime za vetar koji počinje da duva u rano proleće. <!--Ovaj vetar budi prirodu, i biljke i
         životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu
-        da se probudi.
-      </div>
-      <div id="razvigor" class="invert">
-        <p><b>Razvigor</b> je ime za vetar koji počinje da duva u rano proleće.</p>
-        <p>Zdravo, moje ime je <b>Igor</b>. Ovo je deo mojih stvaranja.</p>
-        <p>Tu je da bude sačuvano.</p>
-      </div>
-      <div id="unhearted">
+        da se probudi.-->
+      </p>
+      <p>
+        Zdravo, ja sam Igor.
+      </p>
 
-        {{ macros.section(site.pages, "unhearted") }}
-
-      </div>
-      <div id="visual">
-
-        {{ macros.section(site.pages, "visual") }}
-
-      </div>
-      <div id="light">
-
-        {{ macros.section(site.pages, "light") }}
-
-      </div>
+      {{ macros.section(site.pages) }}
     </div>
   </main>
 
-
-  <div id="razvigor-back" class="background vetar">
-    <svg width="100%" height="100%" viewBox="0 0 600 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
-		<path id="svg_1"
-          d="M600,91.843c0,0 -65,-39 -120,-33c-110,8 -214,83 -259,82c-33,0 -55,-18 -52,-45c3,-21 27,-37 53,-34c21,2 36,18 34,35c-2,14 -17,24 -34,22c-13,-1 -23,-11 -21,-22c1,-9 11,-15 22,-14c9,1 15,7 14,14c-1,6 -7,10 -14,9c-5,0 -9,-5 -9,-9"
-          style="fill:none;"/>
-      <path id="svg_2"
-            d="M600,194.875c0,0 -116.657,66.23 -202.657,68.23c-85,2 -132,-21 -136,-39c-4,-18 4,-27 13,-31c7,-3 16,0 18,6c2,5 -1,12 -6,14c-5,2 -10,0 -12,-4c-1,-4 0,-8 4,-9c3,-1 6,0 8,3c1,2 0,5 -3,6c-2,1 -4,0 -5,-2c-1,-1 0,-3 2,-4"
-            style="fill:none;"/>
-      <path id="svg_3"
-            d="M600,117.843c0,0 -38,-23 -124,-25c-85,-2 -132,21 -136,39c-4,18 4,27 13,31c7,3 16,0 18,-6c2,-5 -1,-12 -6,-14c-5,-2 -10,0 -12,4c-1,4 0,8 4,9c3,1 6,0 8,-3c1,-2 0,-5 -3,-6c-2,-1 -4,0 -5,2c-1,1 0,3 2,4"
-            style="fill:none;"/>
-      <path id="svg_4" d="M600,181.843c0,0 -103,-62 -131,-52c-28,10 23,43 -3,59c-26,16 -144,-4 -144,-4l-165,-36"
-            style="fill:none;"/>
-      <path id="svg_5"
-            d="M600,244.843c0,0 -48.002,-43 -75.604,-50c-26.401,-7 -27.601,41 -67.203,45c-146.408,11 -387.621,-53 -387.621,-53"
-            style="fill:none;"/>
-      <path id="svg_6"
-            d="M600,294.843c0,0 -20.793,-3 -84.116,-18c-64.269,-16 -120.032,34 -184.3,35c-64.269,1 -148.385,-70 -148.385,-70"
-            style="fill:none;"/>
-      <path id="svg_7"
-            d="M600,147c0,0 -22.792,3 -92.205,18c-70.449,16 -131.574,-34 -202.023,-35c-70.449,-1 -162.654,70 -162.654,70"
-            style="fill:none;"/>
-	</svg>
-    <div class="txt txt-razvigor text-pop-up-top">RAZVIGOR</div>
-  </div>
-
-  <div id="unhearted-back" class="background">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="top:0;">
-      <polygon fill="#ff4136" points="0,0 0,100 100,30 100,0"/>
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="bottom:0;"
-         class="heartbeat">
-      <polygon fill="#ff4136" points="0,100 30,100 100,0 100,100"/>
-    </svg>
-    <div class="txt txt-unhearted r-5">UN<span class="heartbeat">HEART</span>ED</div>
-    <div class="txt txt-unhearted2 r5">UNHEARTED</div>
-  </div>
-
-  <div id="visual-back" class="background" style="background-color: #ffdc00;">
-    <div style="display:flex; flex-direction:column; justify-content:space-between; height:100vh;">
-      <div>
-        <svg viewBox="0 0 300 100" style="width: 100%; font-size: 4rem;">
-          <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="50%">VISUAL</text>
-          </symbol>
-          <use class="ant-text" xlink:href="#s-text"></use>
-          <use class="ant-text" xlink:href="#s-text"></use>
-          <use class="ant-text" xlink:href="#s-text"></use>
-          <use class="ant-text" xlink:href="#s-text"></use>
-          <use class="ant-text" xlink:href="#s-text"></use>
-        </svg>
-      </div>
-      <div style="margin-top: auto;" id="visual-txt2">
-        <svg viewBox="0 0 300 100" style="width: 100%; font-size: 4rem;">
-          <symbol id="s-text2">
-            <text text-anchor="middle" x="50%" y="50%">INACTION</text>
-          </symbol>
-          <use class="ant-text" xlink:href="#s-text2"></use>
-          <use class="ant-text" xlink:href="#s-text2"></use>
-          <use class="ant-text" xlink:href="#s-text2"></use>
-          <use class="ant-text" xlink:href="#s-text2"></use>
-          <use class="ant-text" xlink:href="#s-text2"></use>
-        </svg>
-      </div>
-    </div>
-  </div>
-
-  <div id="light-back" class="background">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="top:0;">
-      <polygon fill="#993b69" points="0,0 0,100 100,40 100,0"/>
-      <polygon fill="#85144b" points="0,0 0,100 100,20 100,0"/>
-    </svg>
-    <div class="txt txt-light1 r5 flicker-4">LIGHT</div>
-    <div class="txt txt-light2 r-5 flicker-4 shad" data-shadow="CAPTURED" style="color: rgba(133,20,75,0.04)">CAPTURED
-    </div>
-  </div>
 
 {% endblock %}
