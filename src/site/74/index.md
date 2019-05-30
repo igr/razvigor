@@ -8,5 +8,5 @@
 <script type='text/javascript' src='https://500px.com/embed.js'></script>
 <script type='text/javascript' src='https://500px.com/embed.js'></script>
 
-Jedna od prvih fotografija. Ali svakako prva koja se sama uslikala. Bilo je jutro, prvi put sam izašao sa novim fotoaparatom napolje. Puno toga još nisam znao o svetlosti. Kako bilo, na ovoj livadi fotografija se napravila sama. U trenutku kada sam okinuo okidač, znao sam da je sve tu. Sigurno, može bolje; to sada znam. Draga mi je svejedno.
-{.column}
+Jedna od prvih fotografija. Ali svakako prva koja se sama uslikala. Bilo je jutro, prvi put sam izašao sa novim fotoaparatom napolje. Puno toga još nisam znao o svetlosti. Kako bilo, na ovoj livadi fotografija se napravila sama. U trenutku kada sam okinuo okidač, znao sam da je sve tu. Sigurno, može bolje; no to nije važno.
+

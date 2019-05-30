@@ -13,8 +13,12 @@ main {
   margin-top: 100px;
 }
 
+.top-more {
+  margin-top: 200px;
+}
+
 .wmax .wrapper {
-	width: auto;
+//	width: 100%;
 }
 
 .grid44 {
@@ -22,11 +26,15 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	a {
+    color: $color-black;
 		display: block;
 		text-align: center;
 		padding: 1.5rem 0 1rem 0;
 		font-size: 2rem;
 		font-family: $font-section;
+    &:hover {
+      color: $color-white;
+    }
 	}
 }
 
