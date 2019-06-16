@@ -1,0 +1,169 @@
+{% block head %}
+  <style>
+body {
+  background-color: #b01212;
+}
+#txt {
+  font-size: 30em;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 1em;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(0,0,0,0.45);
+  position: absolute;
+  top: 0.4em;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+#stsd {
+  font-family: Trebuchet MS, sans-serif;
+  font-style: normal;
+  position: fixed;
+  top: 0.4em;
+  font-size: 10em;
+  z-index: 2;
+}
+#stsd b {
+  position: absolute;
+  top:0.5em;
+  z-index:7;
+}
+#stsd span {
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  z-index: 8;
+  text-shadow: 10px -10px 15px rgba(0,0,0,0.25);
+}
+  </style>
+  <script>
+
+class TextScramble {
+  constructor(el) {
+    this.el = el;
+    this.chars = '!<>-_\\/[]{}—=+*^?#________';
+    this.update = this.update.bind(this);
+  }
+  setText(newText) {
+    const oldText = this.el.innerText;
+    const length = Math.max(oldText.length, newText.length);
+    const promise = new Promise(resolve => this.resolve = resolve);
+    this.queue = [];
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || '';
+      const to = newText[i] || '';
+      const start = Math.floor(Math.random() * 40);
+      const end = start + Math.floor(Math.random() * 40);
+      this.queue.push({ from, to, start, end });
+    }
+    cancelAnimationFrame(this.frameRequest);
+    this.frame = 0;
+    this.update();
+    return promise;
+  }
+  update() {
+    let output = '';
+    let complete = 0;
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i];
+      if (this.frame >= end) {
+        complete++;
+        output += to;
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar();
+          this.queue[i].char = char;
+        }
+        output += `<span>${char}</span>`;
+      } else {
+        output += from;
+      }
+    }
+    this.el.innerHTML = output;
+    if (complete === this.queue.length) {
+      this.resolve();
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update);
+      this.frame++;
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)];
+  }}
+
+const phrases = [
+  'nikada',
+  'voleo',
+  'tužan',
+  'umoran',
+  'nikada',
+  'kraj',
+  'zbogom',
+  'zauvek',
+  'slomljen',
+  'zašto',
+];
+
+ready(function() {
+  const el = document.querySelector('#txt');
+  const fx = new TextScramble(el);
+
+  let counter = 0;
+  const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+      setTimeout(next, 800);
+    });
+    counter = (counter + 1) % phrases.length;
+  };
+
+  next();
+});
+  </script>
+{% endblock %}
+{% block main %}
+
+  <main>
+    <div id="txt" style="text-align: center">xxx</div>
+    <div style="color:#DD2828;" class="wrapper">
+      <div id="stsd" >
+        <b style="left:0.00em; color:#C01212;">{</b>
+        <b style="left:0.06em; color:#CC1C1C;">{</b>
+        <b style="left:0.13em; color:#D62626;">{</b>
+        <b style="left:0.19em;">{</b>
+        <b style="left:0.25em;">{</b>
+        <b style="left:0.32em;">{</b>
+        <b style="left:0.38em;">{</b>
+        <b style="left:0.44em;">{</b>
+        <b style="left:0.51em;">{</b>
+        <b style="left:0.57em;">{</b>
+        <b style="left:0.64em;">{</b>
+        <b style="left:0.70em;">{</b>
+        <b style="left:0.76em;">{</b>
+        <b style="left:0.83em;">{</b>
+
+        <i><span>❤</span></i>
+
+        <b style="left:1.47em; color:#C01212;">}</b>
+        <b style="left:1.41em; color:#CC1C1C;">}</b>
+        <b style="left:1.34em; color:#D62626;">}</b>
+        <b style="left:1.28em;">}</b>
+        <b style="left:1.22em;">}</b>
+        <b style="left:1.15em;">}</b>
+        <b style="left:1.09em;">}</b>
+        <b style="left:1.03em;">}</b>
+        <b style="left:0.96em;">}</b>
+        <b style="left:0.90em;">}</b>
+        <b style="left:0.84em;">}</b>
+        <b style="left:0.77em;">}</b>
+        <b style="left:0.71em;">}</b>
+        <b style="left:0.64em;">}</b>
+      </div>
+  </div>
+
+  </main>
+
+{% endblock %}

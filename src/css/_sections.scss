@@ -1,6 +1,6 @@
 
 main {
-  height: 100vh;
+//  height: 100vh;
   margin: 0;
 }
 
@@ -10,7 +10,7 @@ main {
   font-size: 2rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .top-more {
@@ -41,6 +41,8 @@ main {
 #signature {
   letter-spacing: 8px;
   text-align: right;
-  margin: 60px 20px 20px 20px;
+  margin: 100px 20px 20px 20px;
+  line-height: 30px;
+  font-size: 30px;
   color: $color-black;
 }
