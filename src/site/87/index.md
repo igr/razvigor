@@ -5,4 +5,4 @@ da _probudiš_
 koji je tvoj _osmeh_
 jednim pogledom
 **predivno** duboko
-urezao u meni
+urezao u _meni_

@@ -60,3 +60,9 @@ ne reci,
 jer
 disati
 ne mogu
+disati
+prestajem
+dok
+padam
+
+dole.
