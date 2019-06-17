@@ -19,26 +19,6 @@ body {
   z-index: -1;
   overflow: hidden;
 }
-#stsd {
-  font-family: Trebuchet MS, sans-serif;
-  font-style: normal;
-  position: fixed;
-  top: 0.4em;
-  font-size: 10em;
-  z-index: 2;
-}
-#stsd b {
-  position: absolute;
-  top:0.5em;
-  z-index:7;
-}
-#stsd span {
-  position: absolute;
-  left: 0.5em;
-  top: 0.5em;
-  z-index: 8;
-  text-shadow: 10px -10px 15px rgba(0,0,0,0.25);
-}
   </style>
   <script>
 
@@ -106,6 +86,14 @@ const phrases = [
   'zauvek',
   'slomljen',
   'zašto',
+  'izgubljen',
+  'ugašen',
+  'ljubav',
+  'kraj',
+  'bol',
+  'bezimeno',
+  'vrisak',
+  'tama',
 ];
 
 ready(function() {
@@ -128,42 +116,6 @@ ready(function() {
 
   <main>
     <div id="txt" style="text-align: center">xxx</div>
-    <div style="color:#DD2828;" class="wrapper">
-      <div id="stsd" >
-        <b style="left:0.00em; color:#C01212;">{</b>
-        <b style="left:0.06em; color:#CC1C1C;">{</b>
-        <b style="left:0.13em; color:#D62626;">{</b>
-        <b style="left:0.19em;">{</b>
-        <b style="left:0.25em;">{</b>
-        <b style="left:0.32em;">{</b>
-        <b style="left:0.38em;">{</b>
-        <b style="left:0.44em;">{</b>
-        <b style="left:0.51em;">{</b>
-        <b style="left:0.57em;">{</b>
-        <b style="left:0.64em;">{</b>
-        <b style="left:0.70em;">{</b>
-        <b style="left:0.76em;">{</b>
-        <b style="left:0.83em;">{</b>
-
-        <i><span>❤</span></i>
-
-        <b style="left:1.47em; color:#C01212;">}</b>
-        <b style="left:1.41em; color:#CC1C1C;">}</b>
-        <b style="left:1.34em; color:#D62626;">}</b>
-        <b style="left:1.28em;">}</b>
-        <b style="left:1.22em;">}</b>
-        <b style="left:1.15em;">}</b>
-        <b style="left:1.09em;">}</b>
-        <b style="left:1.03em;">}</b>
-        <b style="left:0.96em;">}</b>
-        <b style="left:0.90em;">}</b>
-        <b style="left:0.84em;">}</b>
-        <b style="left:0.77em;">}</b>
-        <b style="left:0.71em;">}</b>
-        <b style="left:0.64em;">}</b>
-      </div>
-  </div>
-
   </main>
 
 {% endblock %}
