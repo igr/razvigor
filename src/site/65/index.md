@@ -1,4 +1,0 @@
-
-![](vrtlog.jpg)
-
-Vrtlog je vir je želja je život je svrha je ponor je sve je vrtlog
