@@ -1,6 +1,6 @@
 {% macro section(pages, name) %}
   <div class="grid44">
-    {% for p in pages | sortBySection %}
+    {% for p in pages() | sortBySection %}
       <a href="{{ p.url }}">{{ loop.index }}</a>
     {% endfor %}
   </div>

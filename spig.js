@@ -1,12 +1,11 @@
-"use strict";
+const { Spig } = require('spignite');
+const SpigConfig = require('spignite/lib/spig-config');
 
-const Spig = require('./spig/spig');
-const SpigConfig = require('./spig/spig-config');
-require('require-dir')('./spig/tasks');
+Spig.hello();
 
+function findSectionMax(fileRef) {
+  const chunks = fileRef.path.split('/');
 
-const findSectionMax = (page) => {
-  const chunks = page.path.split('/');
   if (chunks.length > 2) {
     // section
     if (!SpigConfig.site.max) {
@@ -17,7 +16,7 @@ const findSectionMax = (page) => {
       SpigConfig.site.max = pageNo;
     }
   }
-};
+}
 
 
 // PAGES
@@ -25,12 +24,13 @@ const findSectionMax = (page) => {
 Spig
   .on('/**/*.{md,njk}')
 
-  ._("PREPARE")
-  .pageCommon()
-  .collect('tags')
-  .use(findSectionMax)
+  ._('PREPARE')
+  .pageMeta()
+  .pageLinks()
+  .tags()
+  .do('find max', findSectionMax)
 
-  ._("RENDER")
+  ._('RENDER')
   .summary()
   .render()
   .applyTemplate()
@@ -42,8 +42,8 @@ Spig
 Spig
   .on('/**/*.js')
 
-  ._("PREPARE")
-  .assetCommon();
+  ._('JS')
+  .js();
 
 
 // IMAGES
@@ -51,9 +51,11 @@ Spig
 Spig
   .on('/**/*.{png,jpg,gif}')
 
-  ._("PREPARE")
-  .assetCommon()
+  ._('PREPARE')
+  .assetLinks()
 
-  ._("ASSETS")
+  ._('IMAGES')
   .imageMinify()
 ;
+
+Spig.run();
