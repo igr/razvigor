@@ -1,6 +1,6 @@
 {
   "name": "razvigor",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "razvigor.com",
   "scripts": {
     "clean": "rm -rf out",
@@ -16,6 +16,6 @@
   "license": "MIT",
   "homepage": "https://razvigor.com",
   "dependencies": {
-    "spignite": "^2.0.7"
+    "spignite": "^2.0.8"
   }
 }
