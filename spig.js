@@ -1,5 +1,4 @@
-const { Spig } = require('spignite');
-const SpigConfig = require('spignite/lib/spig-config');
+const { Spig, SpigSite } = require('spignite');
 
 Spig.hello();
 
@@ -8,12 +7,12 @@ function findSectionMax(fileRef) {
 
   if (chunks.length > 2) {
     // section
-    if (!SpigConfig.site.max) {
-      SpigConfig.site.max = 0;
+    if (!SpigSite.max) {
+      SpigSite.max = 0;
     }
     const pageNo = parseInt(chunks[1], 10);
-    if (pageNo > SpigConfig.site.max) {
-      SpigConfig.site.max = pageNo;
+    if (pageNo > SpigSite.max) {
+      SpigSite.max = pageNo;
     }
   }
 }
