@@ -7,7 +7,7 @@ najtužnija
 stvar u kosmosu
 a to je
 da moramo da
-**ugasimo**
+ugasimo
 sebe
 kako bi
 išli dalje.
@@ -45,3 +45,5 @@ utihnem
 
 ovo je kraj
 razvigora.
+
+![](kraj-razvigora.jpg)

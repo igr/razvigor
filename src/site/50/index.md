@@ -1,5 +1,27 @@
-# Na Crti
+želim da budeš moj
+poslednji
+dah
 
-![](na-crti.jpg)
+moj kraj
+dolazi pre
+tvojeg
 
-Šašavi hobiti. "Izađi na crtu", rekoh mu. "Dosta mi je prstenja i zmajeva", rekoh. I izašao hobit na crtu, ceri mi se i plazi se. Ne možeš im ništa, sem da se nasmeješ.
+neumitnost
+razlike u godinama
+koja me je toliko
+tištila
+
+moj kraj dolazi
+na kraju
+nas
+
+želim da
+do tada
+volim te
+toliko
+puno
+da vredi
+za sve
+tvoje
+preostale
+godine

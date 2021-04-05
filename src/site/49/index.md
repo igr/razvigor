@@ -1,5 +1,16 @@
-# Mini
+želim da se
+budim
+svako jutro
+pored
+tebe
 
-![](mini.jpg)
+to mi je
+tako
+jednostavno
+lepo
 
-Mini je još jednom proverila mejl pre spavanja. Pata je poslala recept za pitu koju Šilja puno voli. Miki je već spavao i tiho hrkao. Vreme je da i ona spava, sutra je čekaju neka nova deca.
+i ne treba
+ništa
+više
+
+reći
