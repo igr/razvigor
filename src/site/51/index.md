@@ -1,5 +1,5 @@
-# Na Vrhu
+Sapliću ti se cipele o noge. Pališ svetlo i tiho ulaziš, pomalo pijana, vesela i umorna. U stančiću je mir; obavija te onaj poznati miris vašeg života. Umiruje te. Staješ za trenutak. Puštaš da te obuzme. Mir, miris, tišina, poznato.
 
-![](na-vrhu.jpg)
+Spremaš se za počinak, brzo, nespretno, još uvek te drži vesela noć, osmehuješ se. Ali ne ideš u krevet. Odlaziš u radnu sobu; kao i obično, zaboravio je da isključi malu Ikea lampu. Znaš šta je radio, ono što i uvek kada nisi tu. Slikao je. I ovaj put te je dočekalo još uvek vlažno platno. I videla si tu tada sve: i sebe, i vas, i jeseni, i ruke, i osmehe, i tuge, i završetke i početke. Primetiš u uglu mrljav otisak njegovih prstiju, slučajno zaostalih. Spuštaš svoje prste, jagodice prstiju ti se boje istom bojom.
 
-Ona je radila na četvrtom, a on na dvanaestom spratu. Išli su različitim liftovima. Njoj je posao počinjao u osam, a njemu tek posle devet sati. Za ručak su, sasvim slučajno, odlazili u različite okolne restorane. Nisu imali ni jednog zajedničkog poznanika. Kancelarije su im gledale na različite strane, pa nikada nisu uživali u istom pogledu. Oni to još ne znaju, ali postoji jedna stvar koja im je zajednička. To je vrh zgrade u kojoj rade. Tu će se upoznati. Na vrhu. Sve će dobiti svrhu.
+Gasiš svetlo i odlaziš u krevet. Sklupčaš se. Iako spava, njegova ruka traži tvoju. Šareni prsti se dodiruju ispod pokrivača. Laku noć malena.

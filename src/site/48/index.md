@@ -1,4 +1,4 @@
-# Ledena Kraljica
+# Ledena kraljica
 
 ![](ledena-kraljica.jpg)
 
