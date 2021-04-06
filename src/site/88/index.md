@@ -4,7 +4,7 @@ gde je
 okej
 da postoji
 najtužnija
-stvar u kosmosu
+priča u kosmosu
 a to je
 da moramo da
 ugasimo
@@ -39,8 +39,7 @@ za ljubav
 dok ne
 pustiš
 
-sada samo
-ostaje da
+ostaje samo da
 utihnem
 
 ovo je kraj
