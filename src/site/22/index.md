@@ -1,16 +1,9 @@
-Kada sam te ugledao
-zavoleo sam te, i
-ti si se nasmejala
-jer si to znala
+---
+date: 2015-08-31
+---
 
-Kada sam te poljubio
-zavoleo sam te, i
-ti si me ljubila
-jer si to znala
+# Avgust
 
-Kada sam te voleo
-bilo je to do kraja,
-onog konačnog.
+![](avgust.jpg)
 
-to nisi
-znala.
+Pitaš gde sam te sakrio? Gde čuvam tvoje reči? Gde su se ugnezdili poljupci koje smo ukrali? Tamo, pokazujem na vrhove krošnji koje boje poslednji zraci avgusta.

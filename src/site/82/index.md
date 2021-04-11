@@ -1,40 +1,22 @@
-Znaš koliko je
-teško
-leći uveče u
-prazan krevet
-ne zato što je prazan
-ne zato što je mrak
-ne zato što sam tužan
+---
+date: 2015-10-30
+---
 
-Znaš koliko je
-teško
-leći uveče u
-krevet
-i nadati se
-moliti
-vapiti
-čekati
-privid od
-polu-sna
+# Overexposed srce
 
-Znaš koliko je
-teško
-jebeno teško
-leći
-bez da te
-poljubim
-i celu noć
-utomiti
-mrak
-koji se
-gusto
-sakuplja
-zgušnjava
-negde
-unutra
-u meni
-gde
-me
-poziva
-da
-skončam
+![](overexposed-srce.jpg)
+
+.overexposed.
+.srce.
+.ima.
+.zvuk.
+.francuskih.
+.kotrljajućih.
+.glasova.
+.koji.
+.se.
+.lome.
+.i.
+.prepliću.
+.sa.
+.stvarnošću.

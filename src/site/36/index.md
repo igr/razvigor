@@ -1,29 +1,9 @@
-# Onda kada se desio kraj
+---
+date: 2016-07-27
+---
 
-Krajevi su jednostavni.
-Staju u 4 reči.
+# Feniks
 
-Dan posle.
-Čak ne uspevam ni da pišem.
-Zamisli to.
+![](feniks.jpg)
 
-Otišlo je predaleko.
-Stvari više nikada
-neće biti iste.
-
-Od uskoro,
-više se _nikada_
-nećemo
-videti.
-
-Ja sam...
-ne postoji
-više
-reč
-za ovo
-što je
-što nije
-preostalo
-od mene.
-
-Pretužno je.
+Feniks je još dugo leteo nebom, iako je njegova duša prestala da postoji. Promicao je iznad usnulih glava i zaboravljenih značenja. Sve dok sunce nije izašlo iz mora, prvi zraci su zauvek obrisali njegov trag.

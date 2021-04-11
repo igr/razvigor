@@ -1,7 +1,10 @@
-u nekom drugome životu
-stojimo zajedno
-jedno pored drugoga, i
-smejemo se tome da,
-u nekom drugome životu
+---
+date: 2016-08-28
+---
 
-mi nismo zajedno
+# Gusto leto
+
+![](gusto-leto.jpg)
+
+Gusto letnje veče vuče nadole. Ulazi u pluća, teško se diše, vapim za udahom, izdahom. Grabim pogledom gore, u beskraj... nemoćno. Bještavo svetlo. Sve dalje. Gušće. Tonem.
+

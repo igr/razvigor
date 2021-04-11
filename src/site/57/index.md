@@ -1,1 +1,9 @@
-Kažeš, zvezde su daleko. Kažeš, do planeta je nemoguće doći. Kažeš, ne vidiš padalice, a tolike su želje. Stani. Spoji prste. Tako. Pogledaj. Saturn je u septembru. I menja s(v)e.
+---
+date: 2015-09-08
+---
+
+# Zidovi
+
+![](zidovi.jpg)
+
+Svi mi postavljamo negde zidove: da uobličimo svoj svet u kome obitavamo. No time se ujedno i ograničavamo u onome šta možemo da budemo.

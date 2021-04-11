@@ -1,6 +1,6 @@
 
 U muzeju punom umetnosti
-ti žmuriš
+ti žmuriš.
 
 Muzej smo mi.
 

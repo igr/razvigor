@@ -1,5 +1,9 @@
-![](putovanje.jpg)
+---
+date: 2016-09-10
+---
 
-Jedini pravi način da se otputuje je onaj bez povratka.
+# Zemun
 
-Jedini pravi način da se voli je onaj bez povratka.
+![](zemun.jpg)
+
+U Zemunu ulice nekada menjaju svoj pravac, da bi te vodile kuda treba da ideš, korak po korak. Došao sam do sedmih vrata, dan posle. Budi ili uđi.

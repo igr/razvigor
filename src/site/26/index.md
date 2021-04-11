@@ -1,19 +1,9 @@
-# kvazar
+---
+date: 2015-09-19
+---
 
-na tre nu tke
-isi ja vaš
-ener gi ju
-dos to jnu
-oma nje
-zve zde.
+# BGD jesen
 
-a on da
-se op et
-uru šiš u
-se be sam u
-i ras eč eš
-gal aks iju.
+![](bgd-jesen.jpg)
 
-ja sam samo
-čovek
-koji nas želi.
+Ako niste znali, jesen u Beograd stiže tramvajem. Ne redovnom linijom (a nema ni kartu!), već jednom posebnom. Linijom koja počinje na ulici, a završava se u haustoru. Ili je obratno. Na toj liniji jesen uhvati tramvaj i stigne u naš grad. Dok se tako vozi tunelom, mrak se ispuni raznobojnim svetlom; ako znaš kada i kako, videćeš je.

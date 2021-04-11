@@ -1,16 +1,11 @@
-![](vt.jpg)
+---
+date: 2015-08-28
+---
 
-Ipak nisi.
-I to je u redu.
+# Gluva noć
 
-Bilo je divno.
-Meni.
+![](gluva-noc.jpg)
 
-Bilo je zauvek.
-Meni.
-
-I to je u redu.
-
-Gde god da si
-malena...
-sve.
+Gluvo doba noći. Zabit velegrada. Glasovi ulice ovde su prigušeni.
+Vrata za koja su mi rekli. Jake senke. Na suprotnom zidu obrisi koje ne
+prepoznajem. Ovde sam poslednji čovek na svetu. Neko otvara vrata...

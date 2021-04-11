@@ -1,5 +1,9 @@
-# Posteljina
+---
+date: 2015-09-08
+---
 
-![](posteljina.jpg)
+# Čovek sa dve senke
 
-"Mi ne vodimo ljubav, malena.", rekao je, promuklim glasom. Prozor je bio otvoren i miris noći je zasenio sobu. "Ljubav nas vodi, malena", prošaptao je. Zvuk velegrada je vraćao stvarnost u senke sobe. Ona je još uvek drhtala. Grimizna posteljina je bila izgužvana njihovim telima i snovima. Pratio je put njenog daha, niz svoju maštu; svetlo noći se prelomilo kroz sobu u jednom trenutku na poseban način. Posegnuo je za njom. Tamo gde je nema. Osvrnuo se. Posteljina je bila prazna.
+![](covek-sa-dve-senke.jpg)
+
+Čovek s dve senke je sedeo na ivici bazena. Kako je to moguće, pitao sam ga, da ima dve senke? Malo je sačekao, kao da premišlja, i odgovorio. Svi imamo dve senke. Jedna senka je ova koju svi vide, nerazdvojna od tela. Druga je senka koju samo ti vidiš, koju svi nosimo u sebi. Senka naših suština ocrtana na onim najličnijim mislima.

@@ -1,19 +1,9 @@
-![](l.jpg)
+---
+date: 2015-12-06
+---
 
-jedna
-kriva linija je
-sve
-šta jesmo
+# Nedelja
 
-počinjemo i
-završavamo se
-tačkama
+![](nedelja.jpg)
 
-tu negde
-na pola
-ljubili smo se
-tek tren
-
-činilo se
-kao
-zauvek
+Nedelja. Hteo je nešto da kaže, ali mu reči nisu dolazile. Ptice su napravile krug iznad njega, pratio je pogledom njihov let. Gde je, pitao ih je bez glasa. Ptice nisu odgovarale, samo su pevale bez glasa.

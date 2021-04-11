@@ -1,8 +1,9 @@
-Svako jutro
-_beskrajno_ dugo čekam
-da _probudiš_
-**trag**
-koji je tvoj _osmeh_
-jednim pogledom
-**predivno** duboko
-urezao u _meni_
+---
+date: 2016-10-24
+---
+
+# Privid
+
+![](privid.jpg)
+
+Privid slobode. Tu je i nemušta borba protiv svega i sveta kakvog znamo. Možeš potpuno raditi samo kada si sam.

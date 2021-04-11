@@ -1,23 +1,9 @@
-# kosmički šum
+---
+date: 2016-01-11
+---
 
-Sveprisutna misao
-ili želja
-ili gubitak
-se provlače ispod svega
-što mislim
-ili radim
-ili osećam.
-Beleg koji je ostavio
-kosmički šum.
+# Devojčica i kaktus
 
-K o s m i č k i
-š u m
+![](devojcica-i-kaktus.jpg)
 
-Ti si
-predivni
-neostvareni
-deo
-mene.
-
-Šum koji ostaje
-zauvek.
+Malena devojčica je došla na velikom biciklu u cvećaru. Donela je isto tako maleni kaktus i pitala da li on može da prestane da bode i umesto postane šareni cvet.

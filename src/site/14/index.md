@@ -1,36 +1,9 @@
-![](kosmos.gif)
+---
+date: 2015-08-14
+---
 
-Znaš, onaj Kosmos
-koji je govorio
-svašta
-nešto...
+# Tigrasta Marta
 
-Taj Kosmos,
-malena
-to smo
-mi.
+![](tigrasta-marta.jpg)
 
-Ali nije dao
-taj Kosmos
-da budemo
-ni jedan dan
-i da ga
-prepunimo
-preplavimo
-osmesima pogledima muzikom dodirima krošnjama kvržicama na uvetu glupostima rečima cvećem putovanjima ručkovima kafama šalama tišinom zagrizima snovima mačkama brigama erotikom filmovima decom jastucima svađama nestašlukom mirom jabukama stopalima znojem noćima ringišpilom vunom dudom prolećem setom učenjem ulicama fotografijama trgovima u Rimu gubljenjem nepoznatim gradovima srećom bezrazložnim kikotanjem kosom umorom maštom pesmama na radiju iznenadnim pljuskovima poklonima rođendanima papirićima magnetima za frižider nedeljama šetnjama držanjem pod ruku predstavama ukusima očima koje svetle u mraku i govore
-
-Taj
-Kosmos
-prepukao je
-od punoće
-iscureo
-između
-kvarkova
-i dlanova
-i napuklih snova
-
-pre nego
-što je
-postao
-on je
-prestao
+Tigrasta Marta - poznati grafit koji se misteriozno pojavljuje na mestima velikog komešanja u gradu. Niko nikada nije video da je bilo ko nacrtao grafit, on bi se jednostavno pojavio sam od sebe. Na isti način bi i nestajao, kada bi se i komešanje završilo. Kažu da donosi sreću ukoliko je vidite na paran dan parnog meseca.

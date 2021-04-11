@@ -32,4 +32,3 @@ smisla.
 tamo negde,
 postojim.
 ili ne.
-zbogom.

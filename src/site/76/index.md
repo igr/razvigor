@@ -1,23 +1,9 @@
-![](lines.jpg)
+---
+date: 2015-11-06
+---
 
-nikada nećete razumeti daljine kojima
-stremim.
-nikada nećete shvatiti koliko daleko
-volim.
-nikada nećete videti u meni dalje od
-prolaznog neshvatanja;
-dok ja, eto, vidim
-linije
-i ljubav
-i smrt
-i život
-i suze
-i zalaske
-i plač
-i ugriz
-i blještavost trenutka utaknu u nemogućnost postojanja.
+# Mravlja Kraljica
 
-zbogom svete, danas je predivan dan za
-senke
-i biti
-zaboravljen
+Trećeg dana je došla Mravlja Kraljica. Samo je ćutala i posmatrala me, sa sigurne udaljenosti. Sutradan je došla ponovo. Šta tu radiš, upita me. Stojim. Tek tako? Mda. Posmatrala me još malo mravljim očima, a onda se okrenula i otišla.
+
+Dan kasnije, eto Kraljice ponovo. Još uvek stojiš?, upita. Kao što vidiš, rekoh. Da li te puno boli? Pogledao sam je, bez reči. Ćutali smo. Mravlja Kraljica me je slušala. A onda je pozvala svoje mrave. Skupili su se ispod mojih stopala, podigli me i poneli sa sobom.

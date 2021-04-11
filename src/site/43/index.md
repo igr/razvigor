@@ -1,7 +1,12 @@
-# Ideš dole?
+---
+date: 2015-11-06
+---
 
-![](ides-dole.jpg)
+# Jutra
 
-Dođi dole. Ko si ti? Dozvoli da se predstavim... Znam ko si. Tako je. Šta je dole? Kraj, šta drugo. Srećan kraj? Ne znam, kraj je samo kraj, vi ljudi ste ti koji tražite sreću, ne ja. Ako siđem, da li dobijam nešto? Ha, toga ima samo u knjigama, ne, naravno. Zašto onda? Jer tražiš. Da li boli? Samo dok silaziš. Nije daleko... Nije, idemo? Da.
+![](jutra.jpg)
 
-Drži me za ruku, malena.
+Postoje jutra i jutra. Gde god da si, budiš se sam. Uzmi ih, zato, ta jutra.
+Živi ih u tom trenutku, samo za sebe, sebično se probudi i budi.
+
+Tek posle, pokloni se svetu.

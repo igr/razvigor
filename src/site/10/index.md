@@ -1,24 +1,9 @@
-# Kako si?
+---
+date: 2016-10-06
+---
 
-Pitaš me: "_kako si_"?
-Ćutim.
+# Prozori 2
 
-Mislim na jutra u kojima se budim i posežem za tvojim tragovima.
-Mislim na povratak iz ništavila bez sna i svet kojem si davala smisao.
-Mislim na noći u kojima se saplićem na sećanja i ne pronalazim te.
+![](prozori2.jpg)
 
-Nema te.
-Nemam te.
-Nemamo se.
-
-Sledi još jedan dan.
-Dah, još jedan, i još jedan.
-Izmaglica života
-koji se gubi u krošnjama
-iznad nas.
-Svaki put iznova tražim razlog
-u kome nisam
-konačnost.
-
-Pitaš me: "_kako si_"?
-"_Dobro_", slažem samo.
+Znaš, mi treba da se što više otvaramo, poput prozora; grabimo sunca i puštamo ga u tamu. Da se otvaramo. I prolazimo.

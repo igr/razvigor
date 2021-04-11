@@ -1,47 +1,11 @@
-# Oglas
+---
+date: 2016-08-24
+---
 
-![](prsten.jpg)
+# Frizb-Proročica
 
-Poklanjam jedan prsten.
+![](frizb-prorocica.jpg)
 
-Voleo sam je.
-Maštao sam
-o njenim
-nedeljama,
-tišinama,
-daljinama,
-prstima i
-usnama.
+Frizb-proročica, instant-karma.
 
-Ali istrošila se.
-Iskrzala.
-Ispucala
-po krajevima.
-Pokidala kao
-list papira.
-Ta ljubav koja
-nije
-preostala.
-
-Drugde negde je
-otišla.
-
-Volim je.
-Onako kako je
-nemoguće
-voleti nekoga
-koga više
-nema.
-
-Prsten
-nije na prodaju.
-Traži novi
-početak.
-Poklanjam ga
-onima koji
-drznu
-da se vole
-do kraja.
-Znaćete šta
-vam je
-činiti.
+Ili: menjamo vašu budućnost za stare igračke.

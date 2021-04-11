@@ -1,26 +1,7 @@
-# fotografija koja mora biti obrisana
+---
+date: 2015-11-10
+---
 
-jednostavna je
-lepa, topla.
-deo jednog sveta
-koji niko ne prepoznaje,
-sem mene,
-trag vremena koje niko ne pamti,
-sem mene,
-znak za pitanje koje niko ne pita,
-sem mene.
+![](mladost.jpg)
 
-a opet je važno biti
-obrisana
-obrisan
-brisan
-san
-
-jer ništa tako ne čini
-da brzo, što brže
-ideš dalje
-kao:
-
-obrisan
-sam
-.
+Bili su tek nešto više od dva radoznala bića tek zagrizli u punoletstvo. Leto je mirisalo drsko, dani su bili beskonačni, a oni su neštedemice trošili svoju punoću.

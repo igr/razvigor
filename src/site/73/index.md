@@ -1,5 +1,7 @@
-Nosim u naručju malu Linu; umorna je pa je zagovaram da ne zaspi. Ljubim je i bockam bradom. Pita me da li žene imaju bradu. Smejem se i kažem da ne.
+---
+date: 2015-12-06
+---
 
-Setim se tvojih jedva primetnih dlačica na gornjoj usni.
+![](mistik.jpg)
 
-Bože koliko te samo volim
+Nemogavši da nađe san, dočekao je sivilo koje je bilo dovoljno svetlo da se nazove jutrom. Izašao je i pustio da ga put pronađe. Korak po korak, bez misli. Trajalo je tako dok se nije spotakao. O jednu reč. Bam. On i ona. Jedno naspram drugog. U zaglušujućoj jačini. Kako li će sada nazad?

@@ -1,20 +1,9 @@
-tišina
-je isto
-što i
-beskraj
-ništavila
+---
+date: 2016-07-28
+---
 
-tišina
-je isto
-što i
-mrak
-svetlosti
+# Devojka sa mačkom
 
-tišina
-je isto
-što i
+![](devojka-sa-mackom.jpg)
 
-tvoja
-tišina
-je
-kraj svega
+Devojka sa mačkom, živi u svetu papirnih lutki, piše olovkom i slika bojama, popunjava prostor, tamo gde ga nema, i tamo gde ga ima, negde je mašta, a negde sadržina.

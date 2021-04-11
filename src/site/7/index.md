@@ -1,35 +1,15 @@
-tužno je
-malena
-što prestanem
-da zovem te
-šapatom
-malena
+---
+date: 2015-08-19
+---
 
-tužno je
-malena
-što grizem se
-za usne
-kako te
-ne bih
-poljubio
+# Maline
 
-tužno je
-malena
-što već
-dugo jako
-nisi
-nisi
-moja malena
+![](maline.jpg)
 
-tužno je
-malena
-što ove
-reči
-negde moraju
-stati
-prestati
+"Mali, na malina", reče Velika Malom.
 
-kao sada
+Mali je pogleda i kao svaki deran zgrabi punu šaku malina.
 
-ljubav moja je
-beskrajna
+Velika se nasmeja dok je Mali halapljivo gutao maline.
+
+"Milina", pomisli.

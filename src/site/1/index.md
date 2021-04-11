@@ -1,17 +1,16 @@
-ne želim
-da upotpuniš moje praznine
-to mogu i sam
+# Mala Lina raste
 
-želim da budem
-toliko ceo
-da obasjam jebeni grad
+baš me to ljuti: Mala Lina svaki dan poraste još malo
 
-tek tada
-želim tebe
-jer nas dvoje zajedno
+ne znam šta nisam probao
 
-možemo da
-zapalimo
-čitavi
+seckam joj kosu
+golicam po stopalima
+vijam je po livadi
+prevrćem preko glave
+izmišljam imena sladoleda
+glumim dinosaurse
+podmećem joj herc četvorku
+sakrivam patike ispod kreveta
 
-kosmos
+ali ona uvek poraste još malo

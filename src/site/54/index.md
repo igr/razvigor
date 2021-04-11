@@ -1,11 +1,17 @@
-# 2
+# Mala Lina i poslednji kolačić
 
-![](2.jpg)
+Jednog dana, Mala Lina je pomagala baki da pravi kolačiće. Lina ko Lina; rešila je da par kolača napravi po receptu koji je sama upravo smislila. Za jedan se posebno potrudila: dodala je malo čokoladnog namaza, posula mrvljenim keksom i na vrh stavila jednu sočnu malinu. Kada je sve završila, bacila se na kolačiće. Mljac, mljac, čulo se samo u kuhinji.
 
-Ruke.
+Par kolačića se brzo pojede. Ostao je još jedan, onaj najlepši od svih, koga je čuvala za kraj. Očas posla i Mala Lina pojede i taj u slast.
 
-Dvoje.
+![](kolac.png)
 
-Moje.
+Taman je Mala Lina htela da ustane od stola i odnese prazan tanjirić do sudopere kada je začuđeno zastala. Pa tanjirić uopšte nije bio prazan! Tu se nalazio još jedan kolačić, i, kako joj se čini, vrlo nalik ovome koga je upravo pojela. Čudno, pomisli Mala Lina, sigurno sam se nešto zbunila. Šta da se radi, slegnula je ramenila i dohvatila kolačić sa tanjirića. Ovaj put ga je pojela natenane, onako kako deca već to polako rade sa poslednjim slatkišem koji im ostane.
 
-Tvoje.
+Dobro, reče Mala Lina i skoči sa stolice, sada sam gotova, idem napolje da se igram. Kad najednom, nešto ju je zaustavilo u mestu. Na tanjiriću je i dalje stajao jedan kolačić!
+
+Sada je već bila sigurna da nije pogrešila i da je upravo bila pojela poslednji kolačić. Otkuda onda još jedan? Pogledala je oko sebe, bila je i dalje sama u kuhinji.
+
+"E baš svašta", uzviknu Lina naglas. Ovaj put nije htela da čeka, zgrabila je kolačić i istrčala napolje da se igra.
+
+Da je ostala još malo, videla bi da je na tanjiriću i dalje čeka jedan kolačić. Možda je u pitanju nekakva magija, ili čarobni recept... ili možda ima veze sa Lininim tatom koji se neprimetno išunjao iz kuhinje čum je Lina otišla... kako bilo, Mala Lina nikada nije otkrila tajnu. Ali se zato zauvek sećala ukusa poslednjeg kolačića.

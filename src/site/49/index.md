@@ -1,16 +1,9 @@
-želim da se
-budim
-svako jutro
-pored
-tebe
+---
+date: 2016-10-21
+---
 
-to mi je
-tako
-jednostavno
-lepo
+# Grimizno
 
-i ne treba
-ništa
-više
+![](grimizno.jpg)
 
-reći
+Grimizno halapljivo uzima. Sve boje, sve nestanu, sem dubokih senki. Grimizna nije boja, ne, grimizno je ono šta kuca kada izdahneš dah i čekaš neumitni povratak u život. Uzima, obuzima, grrrrabi.
