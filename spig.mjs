@@ -1,10 +1,11 @@
-import { Spig, SpigSite } from "spignite";
+import { Spig, SpigConfig } from "spignite";
 
 Spig.hello();
 
 function findSectionMax(fileRef) {
   const chunks = fileRef.path.split('/');
-
+  const SpigSite = SpigConfig.site;
+  
   if (chunks.length > 2) {
     // section
     if (!SpigSite.max) {
