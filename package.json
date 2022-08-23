@@ -5,8 +5,8 @@
   "type": "commonjs",
   "scripts": {
     "clean": "rm -rf out",
-    "dev": "node spig.js dev",
-    "build": "node spig.js",
+    "dev": "node spig.mjs dev",
+    "build": "node spig.mjs",
     "build:lambda": "cd netlify && build.sh"
   },
   "author": {
