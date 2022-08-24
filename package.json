@@ -17,6 +17,6 @@
   "license": "MIT",
   "homepage": "https://razvigor.com",
   "dependencies": {
-    "spignite": "^3.0.0-1"
+    "spignite": "^3.0.0"
   }
 }
