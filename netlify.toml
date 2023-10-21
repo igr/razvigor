@@ -1,6 +1,0 @@
-[build]
-  publish = "out"
-  command = "npm run build"
-
-[context.production.environment]
-  SPIG_PRODUCTION = "true"

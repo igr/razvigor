@@ -1,7 +1,0 @@
----
-date: 2016-10-18
----
-
-# Fliper
-
-Oktobra 1977. odigrana je neponovljiva partija flipera. Tomi je jedne mutne, kišne večeri svratio u poluprazan klub. Imao je pri sebi novca za jedno piće i jedan žeton za fliper. Treba reći da je Tomi voleo flipere, ali nikada nije pokazao bilo kakvo vanredno umeće. Te večeri, započeo je partiju tek tako, bez ikakve namere sem da ubije par minuta. Prva loptica je brzo prošla sa strane. Tomi je ispalio sledeću u igru. A onda je krenulo da se dešava. Kasnije je Tomi pričao da ga je baš ta, druga loptica, prenela u stanje slično transu: ceo njegov svet se suzio i postao ta metalna lopta. No i ona je brzo završila između dirki flipera. Bez okoliša, ispalio je poslednju. U tom trenutku ona je bila sve što je imao: strast i udisaj, razočarenje i snovi, prošlo vreme i sumorna neizvesnost. Igra je počela. Treća loptica, kao vučena magijom, nije znala da propadne. Tomi je igrao i igrao, fliper je sve više piskutao digitalnim zvucima. Padale su zastavice, zadaci su bivali ispunjeni, a loptica je i dalje neumorno udarala. Bonusi su se ređali. Ljudi su počeli da se okupljaju, zovu druge, i uskoro se stvorila velika gužva, koja jr nemo posmatrala. I trajalo je... A onda, tomi podigne desnu palicu flipera i zaustavi lopticu u uglu. Pogleda oko sebe: fliper je bještao kao bežično drvo, ljudi su u neverici posmatrali, piće koje je još stajalo na šanku i svoje prste. A onda je samo otpustio taster, loptica se spustila niz palicu i konačno propala. Game over.

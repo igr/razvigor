@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PrevNext from '../../components/PrevNext.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('foto');
+	const numberOfPosts = entries.length;
+  return entries.map((entry, i) => ({
+    params: { slug: entry.slug },
+		props: {
+			entry,
+			prev: i === 0 ? null : entries[i - 1],
+			next: i + 1 === numberOfPosts ? null : entries[i + 1],
+		},
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const { Content } = await entry.render();
+---
+<BaseLayout title={entry.slug}>
+	<PrevNext prev={prev} next={next} />
+	<main>
+    <div class="wrapper">
+      <Content />
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+	body {
+		background-color: #000;
+	}
+	.wrapper {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+</style>
+<style is:global>
+	img {
+		width: 80vw;
+		height: auto;
+		margin: 0 auto;
+		display: block;
+		border: 20px solid white;
+
+		position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	}
+	path {
+		fill: white;
+	}
+</style>

@@ -1,6 +1,0 @@
-# U kolima
-
-![](u-kolima.jpg)
-
-Bilo nas je šestoro u kolima: on i njegove misli na neku drugu;
-ona i njene misli na nekog drugog; njegova prošlost i njena budućnost.

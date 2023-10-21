@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import '../styles/index.scss';
+import { getCollection } from 'astro:content';
+const allStihPosts = await getCollection('stih');
+const allFotoPosts = await getCollection('foto');
+---
+
+<Layout title=" r a z v i g o r ">
+	<main>
+		<div class="txt text-pop-up-top" style="position: fixed">RAZVIGOR</div>
+		<div class="wrapper top-more">
+		  <p>
+			<b>Razvigor</b> - ime za vetar koji počinje da duva u rano proleće. <!--Ovaj vetar budi prirodu, i biljke i
+			životinje, a tako i treperi kako devojačko tako i momačko srce. Razvigore su tako vile koje pozivaju prirodu
+			da se probudi.-->
+		  </p>
+		  <p>
+			Zdravo, ja sam Igor.
+		  </p>
+			<h2>§</h2>
+			<div class="grid44">
+				{allFotoPosts.map(p => (
+					<a href={`/foto/${p.slug}`}>{p.slug}</a>
+					))}
+			</div>
+			<h2>*</h2>
+			<div class="grid44">
+				{allStihPosts.map(p => (
+					<a href={`/stih/${p.slug}`}>{p.slug}</a>
+					))}
+			</div>
+		</div>
+	  </main>
+</Layout>
+
+<style>
+</style>

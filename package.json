@@ -1,22 +1,17 @@
 {
   "name": "razvigor",
-  "version": "3.0.0",
-  "description": "razvigor.com",
-  "type": "commonjs",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "clean": "rm -rf out",
-    "dev": "node spig.mjs dev",
-    "build": "node spig.mjs",
-    "build:lambda": "cd netlify && build.sh"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": {
-    "name": "Igor Spasić",
-    "email": "igor.spasic@gmail.com",
-    "url": "https://igo.rs/"
-  },
-  "license": "MIT",
-  "homepage": "https://razvigor.com",
   "dependencies": {
-    "spignite": "^3.0.0"
+    "astro": "^3.2.3",
+    "remark-breaks": "^4.0.0",
+    "sass": "^1.69.0"
   }
 }

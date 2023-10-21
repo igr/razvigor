@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PrevNext from '../../components/PrevNext.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('stih');
+	const numberOfPosts = entries.length;
+  return entries.map((entry, i) => ({
+    params: { slug: entry.slug },
+		props: {
+			entry,
+			prev: i === 0 ? null : entries[i - 1],
+			next: i + 1 === numberOfPosts ? null : entries[i + 1],
+		},
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const { Content } = await entry.render();
+---
+<BaseLayout title={entry.slug}>
+	<PrevNext prev={prev} next={next} />
+	<main>
+    <div class="wrapper">
+      <Content />
+      <div id="signature">█ █ █</div>
+    </div>
+  </main>
+</BaseLayout>
